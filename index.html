@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fbf7ee">
+  <meta name="description" content="欢迎来到洋芋的小小世界。通过真实的生活故事和作品，慢慢认识 George Fang，方智灏。">
+  <title>I AM GEORGE · 洋芋的小小世界</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到正文</a>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="IAMGEORGE 首页">
+      <svg class="brand-flower" aria-hidden="true"><use href="assets/stickers.svg#flower"></use></svg>
+      <span><strong>I AM GEORGE<span class="brand-dot">.</span></strong><small>洋芋的小小世界</small></span>
+    </a>
+    <nav aria-label="主要导航">
+      <a href="#world">他的世界</a><a href="#creations">小小画廊</a><a href="#memories">留住的时光</a><a href="#letters">写给洋芋</a>
+    </nav>
+    <div class="paper-control">
+      <button id="paper-toggle" class="paper-toggle" aria-expanded="false" aria-controls="paper-palette" title="换一种纸色">
+        <span class="palette-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>换个纸色</span>
+      </button>
+      <div id="paper-palette" class="paper-palette" hidden>
+        <span>今天用哪张纸？</span>
+        <div role="group" aria-label="页面纸色">
+          <button class="paper-swatch selected" data-paper="cream" aria-label="奶油白" aria-pressed="true"></button>
+          <button class="paper-swatch" data-paper="blue" aria-label="浅浅蓝" aria-pressed="false"></button>
+          <button class="paper-swatch" data-paper="pink" aria-label="淡淡粉" aria-pressed="false"></button>
+          <button class="paper-swatch" data-paper="green" aria-label="嫩嫩绿" aria-pressed="false"></button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero wrap" id="top" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow"><span class="tiny-star" aria-hidden="true">✳</span> A BIG LITTLE WORLD</p>
+        <h1 id="hero-title"><span class="i-am">I AM</span><span class="george" aria-label="GEORGE."><span aria-hidden="true">G</span><span aria-hidden="true">E</span><span aria-hidden="true">O</span><span aria-hidden="true">R</span><span aria-hidden="true">G</span><span aria-hidden="true">E</span><span aria-hidden="true">.</span></span></h1>
+        <p class="name-line">George Fang <span>·</span> 方智灏 <span>·</span> 洋芋</p>
+        <h2>欢迎来到<br>洋芋的小小世界<span class="coral">。</span></h2>
+        <p class="hero-description">这里有五彩缤纷的颜色，<br>也有值得慢慢讲的小故事。</p>
+        <a class="button button-dark" href="#world">一起逛逛 <span aria-hidden="true">↗</span></a>
+        <p class="hero-footnote">从一个小片段开始，慢慢认识他。</p>
+      </div>
+
+      <div class="hero-art">
+        <div class="outer-star" aria-hidden="true"><svg><use href="assets/stickers.svg#sparkle"></use></svg></div>
+        <div class="sticker-board" aria-label="可以轻点移动的彩色贴纸墙">
+          <div class="board-topline"><span>洋芋的色彩</span><span>little things, lots of color.</span></div>
+          <div class="sticker-field" id="sticker-field">
+            <div class="name-paper"><span class="paper-tape" aria-hidden="true"></span><small>HELLO, WORLD!</small><strong>洋芋</strong><span>YANG YU</span><svg aria-hidden="true"><use href="assets/stickers.svg#heart"></use></svg></div>
+          </div>
+          <div class="board-bottomline"><span>小小的图形，好多好多颜色。</span><button id="shuffle-stickers" aria-label="重新摆放彩色贴纸">重新摆一摆 <span aria-hidden="true">↻</span></button></div>
+        </div>
+        <div class="art-note"><span aria-hidden="true">↖</span> 轻点小贴纸，挪一挪。</div>
+        <span class="checker-tape" aria-hidden="true"></span>
+      </div>
+    </section>
+
+    <section class="world-section wrap" id="world" aria-labelledby="world-title">
+      <div class="section-heading"><div><p class="eyebrow">01 / GEORGE'S WORLD</p><h2 id="world-title">从这里，走进他的世界<span class="green">。</span></h2></div><p>一张画，一段时光，一封信。<br>我们一点一点添进来。</p></div>
+      <div class="space-grid">
+        <a class="space-card world-card" href="#story"><span class="card-number">01</span><svg aria-hidden="true"><use href="assets/stickers.svg#sun"></use></svg><h3>他的世界</h3><p>从爸爸讲的小故事开始。</p><span class="card-arrow" aria-hidden="true">↗</span><span class="card-en">LITTLE STORIES</span></a>
+        <a class="space-card art-card" href="#creations"><span class="card-number">02</span><svg aria-hidden="true"><use href="assets/stickers.svg#pencil"></use></svg><h3>小小画廊</h3><p>留给他画过的小小世界。</p><span class="card-arrow" aria-hidden="true">↗</span><span class="card-en">LITTLE CREATIONS</span></a>
+        <a class="space-card memory-card" href="#memories"><span class="card-number">03</span><svg aria-hidden="true"><use href="assets/stickers.svg#rainbow"></use></svg><h3>留住的时光</h3><p>照片、声音，还有那一天。</p><span class="card-arrow" aria-hidden="true">↗</span><span class="card-en">LITTLE MOMENTS</span></a>
+        <a class="space-card letter-card" href="#letters"><span class="card-number">04</span><svg aria-hidden="true"><use href="assets/stickers.svg#heart"></use></svg><h3>写给洋芋</h3><p>想说的话，慢慢写下来。</p><span class="card-arrow" aria-hidden="true">↗</span><span class="card-en">LETTERS TO GEORGE</span></a>
+      </div>
+    </section>
+
+    <section class="story-section wrap" id="story" aria-labelledby="story-title">
+      <div class="story-art" aria-hidden="true"><div class="music-paper"><span class="paper-tape"></span><svg class="music-sticker"><use href="assets/stickers.svg#music"></use></svg><span class="time">2:00<span>PM</span></span><div class="piano-keys"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><b></b><b></b><b></b><b></b><b></b></div><small>去上钢琴课的路上</small></div><svg class="story-spark"><use href="assets/stickers.svg#star"></use></svg></div>
+      <div class="story-copy"><p class="eyebrow">爸爸记得的一个小片段</p><h2 id="story-title">“爸爸，<br>我刚眯了一会儿。”</h2><p>钢琴课大约在下午两点。爸爸记得，每次开车送洋芋去上课，他都会在车上睡着。</p><p>到了地方，无论是自己醒来，还是爸爸喊他，他都会下意识地说这句话。</p><p>爸爸配合他打马虎眼，聊点别的，再哄着他去上课。</p><button class="text-button" id="read-story">读爸爸的完整讲述 <span aria-hidden="true">↗</span></button><span class="source-note">来自爸爸的回忆</span></div>
+    </section>
+
+    <section class="gallery-section wrap" id="creations" aria-labelledby="gallery-title">
+      <div class="section-heading"><div><p class="eyebrow">02 / GEORGE'S CREATIONS</p><h2 id="gallery-title">那些小小的画<span class="blue">。</span></h2></div><p>爸爸说，他的画风很稳，<br>画的东西很小。</p></div>
+      <div class="gallery-paper"><div class="gallery-margin"><span>GEORGE'S<br>SKETCHBOOK</span><span>慢慢添进来</span></div><div class="empty-art-frame"><span class="frame-corner top-left"></span><span class="frame-corner top-right"></span><span class="frame-corner bottom-left"></span><span class="frame-corner bottom-right"></span><svg aria-hidden="true"><use href="assets/stickers.svg#pencil"></use></svg><h3>把一幅小小的画，<br>好好放在这里。</h3><p>等家人准备好了，就来分享他的原作。</p></div><div class="gallery-side"><svg aria-hidden="true"><use href="assets/stickers.svg#flower"></use></svg><span>每一个小细节，<br>都值得被看见。</span></div></div>
+      <p class="decoration-note">页面里的彩色小图形是网站装饰，洋芋的画作会单独展示。</p>
+    </section>
+
+    <section class="memories-section wrap" id="memories" aria-labelledby="memories-title">
+      <div class="memory-heading"><p class="eyebrow">03 / GEORGE'S MEMORIES</p><h2 id="memories-title">留住一张照片，<br>也留住那一天<span class="yellow">。</span></h2><p>照片、声音和视频，<br>我们按家人的节奏，慢慢整理。</p></div>
+      <div class="memory-pages"><div class="photo-page"><span class="paper-tape"></span><div class="photo-space"><svg aria-hidden="true"><use href="assets/stickers.svg#sun"></use></svg><span>给一张照片<br>留个位置</span></div><small>那一天的故事，等你来讲。</small></div><div class="sound-page"><svg aria-hidden="true"><use href="assets/stickers.svg#cloud"></use></svg><div class="sound-lines" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><span>留给一段熟悉的声音</span></div></div>
+    </section>
+
+    <section class="letters-section wrap" id="letters" aria-labelledby="letters-title"><div class="letter-intro"><p class="eyebrow">04 / LETTERS TO GEORGE</p><h2 id="letters-title">洋芋，<br>今天想跟你说<span class="coral">……</span></h2><p>短短几句话，也可以是一封信。<br>写好了，就留在自己身边。</p><svg aria-hidden="true"><use href="assets/stickers.svg#heart"></use></svg></div><form id="letter-form" class="letter-paper"><span class="paper-tape" aria-hidden="true"></span><label for="letter-body">亲爱的洋芋：</label><textarea id="letter-body" name="letter" rows="6" placeholder="今天，我想跟你说……" required maxlength="20000"></textarea><div class="letter-bottom"><span>文字不会上传；下载后保存在你的设备上。</span><button class="button button-dark" type="submit">下载这封信 <span aria-hidden="true">↓</span></button></div><p id="letter-status" class="letter-status" role="status" aria-live="polite"></p></form></section>
+  </main>
+
+  <footer class="site-footer wrap"><div class="footer-name"><svg aria-hidden="true"><use href="assets/stickers.svg#flower"></use></svg><div><strong>George Fang · 方智灏 · 洋芋</strong><span>2019.10.31 — 2025.11.23</span></div></div><p>He was here. He was loved. His story remains.<br><span>他的故事，我们慢慢讲。</span></p><a href="#top" aria-label="回到顶部">↑</a></footer>
+
+  <dialog id="story-dialog" aria-labelledby="dialog-title"><button class="dialog-close" id="close-story" aria-label="关闭故事">×</button><p class="eyebrow">爸爸的讲述</p><h2 id="dialog-title">洋芋去上钢琴课的路上</h2><div class="dialog-story"><p>“他是二宝，如果大宝是直男的话，他相对于哥哥，比较会看人脸色。</p><p>他比较喜欢搭话，就是说那种桥梁话。一个是他还在发展语言，二是我觉得和性格有关。</p><p>比如他特别喜欢复述别人的话，给自己思考的时间。</p><p>或者是我每次开车送他去学钢琴，他都会在车上睡着，钢琴课是下午2点左右。车子到了，无论是他自己醒了还是我喊的，他都会下意识的是：爸爸，我刚眯了一会儿。</p><p>我觉得他可能是怕我生气。</p><p>但是我知道他的性格，我非常配合的他打马虎眼。然后就聊别的，哄着去上课。</p><p>其实这样反而有利于语言的发展。不会像哥哥那样直男。不会讲话。”</p></div><p class="dialog-source">以上保留爸爸的原话，包含他的观察和理解。<br>故事发生日期尚未注明。</p></dialog>
+</body>
+</html>
