@@ -1,0 +1,54 @@
+{
+  "version": 1,
+  "tags": [
+    {
+      "id": "daily-life",
+      "label": "日常小事",
+      "labelEn": "Everyday moments"
+    },
+    {
+      "id": "his-words",
+      "label": "说过的话",
+      "labelEn": "His words"
+    }
+  ],
+  "stories": [
+    {
+      "id": "piano-car-nap",
+      "title": "爸爸，我刚眯了一会儿",
+      "excerpt": "下午两点左右的钢琴课，车上睡着的洋芋，还有爸爸配合着聊别的小片段。",
+      "paragraphs": [
+        "洋芋是家里的二宝。他才六岁，我还很难用几个词说清他的性格，只能讲些小故事。",
+        "他喜欢搭话，也喜欢复述别人的话。我觉得，他有时是在给自己留一点思考的时间。",
+        "钢琴课大约在下午两点。每次我开车送他去上课，他都会在车上睡着。到了地方，无论是他自己醒来，还是我喊醒他，他都会下意识地说，“爸爸，我刚眯了一会儿。”",
+        "我觉得，他可能是怕我生气。我了解他，也就配合着打个马虎眼，聊些别的，哄着他去上课。"
+      ],
+      "tags": [
+        "daily-life",
+        "his-words"
+      ],
+      "eventDate": null,
+      "eventDateLabel": "故事发生日期尚未注明",
+      "addedDate": "2026-10-13",
+      "sourceLabel": "根据爸爸的讲述整理",
+      "narrator": "爸爸",
+      "featured": true,
+      "relatedIds": [],
+      "translations": {
+        "en": {
+          "title": "Dad, I just had a little nap",
+          "excerpt": "A piano lesson around two, Yang Yu falling asleep in the car, and Dad playing along and talking about something else.",
+          "paragraphs": [
+            "Yang Yu was our second child. He was only six, and I still find it hard to describe his personality in a few words. I can only tell some little stories.",
+            "He liked joining in conversations, and he liked repeating what other people said. I felt that sometimes he was giving himself a little time to think.",
+            "His piano lessons were around two in the afternoon. Whenever I drove him to class, he would fall asleep in the car. When we arrived, whether he woke up on his own or I woke him, he would instinctively say, “Dad, I just had a little nap.”",
+            "I felt he might be worried I would be annoyed. I knew him, so I played along, talked about something else, and coaxed him into class."
+          ],
+          "sourceLabel": "Edited from Dad’s account",
+          "narrator": "Dad",
+          "eventDateLabel": "Story date not yet recorded"
+        }
+      }
+    }
+  ]
+}

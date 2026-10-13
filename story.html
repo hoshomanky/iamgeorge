@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fbf7ee">
+  <meta name="description" data-i18n-content="detailDescription" content="读一个关于洋芋的小故事，根据爸爸的真实讲述整理。">
+  <title>一个小故事 · I AM GEORGE</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="stories.css">
+  <link rel="stylesheet" href="bilingual.css">
+  <link rel="stylesheet" href="typography.css">
+  <script src="i18n.js" defer></script>
+  <script src="stories.js" defer></script>
+</head>
+<body data-story-page="detail" data-i18n-title="detailTitle">
+  <a class="skip-link" href="#main" data-i18n="skip">跳到正文</a>
+  <header class="site-header">
+    <a class="brand" href="index.html" data-i18n-aria-label="brandHome" aria-label="IAMGEORGE 首页"><svg class="brand-flower" aria-hidden="true"><use href="assets/stickers.svg#flower"></use></svg><span><strong>I AM GEORGE<span class="brand-dot">.</span></strong><small data-i18n="brandSubtitle">洋芋的小小世界</small></span></a>
+    <nav data-i18n-aria-label="mainNav" aria-label="主要导航"><a href="stories.html" aria-current="page" data-i18n="navStories">小小故事册</a><a href="index.html#creations" data-i18n="navCreations">小小画廊</a><a href="index.html#memories" data-i18n="navMemories">留住的时光</a><a href="index.html#letters" data-i18n="navLetters">写给洋芋</a></nav>
+    <div class="header-tools"><div class="language-switch" role="group" data-i18n-aria-label="languageGroup" aria-label="阅读语言"><button type="button" data-set-lang="zh" aria-pressed="true" lang="zh-CN">中文</button><button type="button" data-set-lang="en" aria-pressed="false" lang="en">EN</button></div><div class="paper-control"><button id="paper-toggle" class="paper-toggle" aria-expanded="false" aria-controls="paper-palette" data-i18n-title="paperChangeTitle" title="换一种纸色"><span class="palette-dots" aria-hidden="true"><i></i><i></i><i></i></span><span data-i18n="paperToggle">换个纸色</span></button><div id="paper-palette" class="paper-palette" hidden><span data-i18n="paperTitle">今天用哪张纸？</span><div role="group" data-i18n-aria-label="paperGroup" aria-label="页面纸色"><button class="paper-swatch selected" data-paper="cream" data-i18n-aria-label="paperCream" aria-label="奶油白" aria-pressed="true"></button><button class="paper-swatch" data-paper="blue" data-i18n-aria-label="paperBlue" aria-label="浅浅蓝" aria-pressed="false"></button><button class="paper-swatch" data-paper="pink" data-i18n-aria-label="paperPink" aria-label="淡淡粉" aria-pressed="false"></button><button class="paper-swatch" data-paper="green" data-i18n-aria-label="paperGreen" aria-label="嫩嫩绿" aria-pressed="false"></button></div></div></div></div>
+  </header>
+
+  <main id="main" class="wrap story-detail-main">
+    <a class="back-link" href="stories.html" data-i18n="backStorybook">← 回到小小故事册</a>
+    <p id="detail-status" class="detail-status" role="status" aria-live="polite">正在翻开这一页……</p>
+    <article id="story-article" class="story-reading-paper" aria-labelledby="detail-title" hidden>
+      <span class="paper-tape" aria-hidden="true"></span><svg class="reading-sticker" aria-hidden="true"><use href="assets/stickers.svg#flower"></use></svg>
+      <header class="reading-header"><p class="eyebrow" id="detail-narrator">家人记得的一个小片段</p><h1 id="detail-title"></h1><div id="detail-tags" class="story-card-tags"></div><p id="detail-event-date" class="detail-date"></p></header>
+      <div id="detail-paragraphs" class="story-paragraphs"></div>
+      <footer class="reading-source"><p id="detail-source"></p><p id="detail-added-date"></p></footer>
+    </article>
+    <div id="story-share" class="story-share" hidden><button id="copy-story-link" class="button button-dark" type="button"><span data-i18n="copyStoryLink">复制这个故事的链接</span> <span aria-hidden="true">↗</span></button><p id="share-status" role="status" aria-live="polite"></p><label id="manual-copy-label" class="manual-copy-label" for="manual-story-link" data-i18n="manualCopy" hidden>可以选中下面的链接，手动复制。</label><input id="manual-story-link" class="manual-story-link" type="url" readonly hidden aria-labelledby="manual-copy-label"></div>
+    <nav id="story-neighbours" class="story-neighbours" data-i18n-aria-label="continueStories" aria-label="继续读故事" hidden></nav>
+    <section id="related-stories" class="related-stories" aria-labelledby="related-title" hidden><h2 id="related-title" data-i18n="relatedTitle">还可以读读</h2><div id="related-story-links"></div></section>
+    <div id="detail-message" class="collection-message" hidden><svg aria-hidden="true"><use href="assets/stickers.svg#cloud"></use></svg><h1 id="detail-message-title"></h1><p id="detail-message-text"></p><button id="detail-retry" class="button button-dark" type="button" data-i18n="retry" hidden>重新翻开</button><a class="detail-return" href="stories.html"><span data-i18n="returnStorybook">回到小小故事册</span> <span aria-hidden="true">↗</span></a></div>
+    <noscript><p class="no-script-note"><span>请启用浏览器的 JavaScript 来阅读这一页。</span> <a href="index.html#story">也可以先回首页读这个小片段。</a><br><span lang="en">Enable JavaScript to read this page, or read the little moment on the home page.</span></p></noscript>
+  </main>
+
+  <footer class="site-footer wrap"><div class="footer-name"><svg aria-hidden="true"><use href="assets/stickers.svg#flower"></use></svg><div><strong>George Fang · 方智灏 · 洋芋</strong><span>2019.10.31 — 2025.11.23</span></div></div><p><span data-i18n="footerStory">他的故事，我们慢慢讲。</span><br><span data-i18n="footerDecoration">彩色小图形为网站装饰。</span></p><div class="footer-links"><a class="footer-about" href="about.html" data-i18n="navAbout">关于 IAMGEORGE</a><a class="footer-top" href="#main" data-i18n-aria-label="backTop" aria-label="回到顶部">↑</a></div></footer>
+</body>
+</html>

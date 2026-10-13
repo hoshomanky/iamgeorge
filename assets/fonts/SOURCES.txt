@@ -1,0 +1,17 @@
+IAMGEORGE English typography
+
+Fraunces by Undercase Type
+https://fraunces.undercase.xyz/
+https://github.com/google/fonts/tree/main/ofl/fraunces
+Local file: fraunces-latin.woff2
+Google Fonts CSS2 Latin variable webfont, normal, weights 400–700.
+License: Fraunces-OFL.txt
+
+Newsreader by Production Type
+https://github.com/productiontype/Newsreader
+https://github.com/google/fonts/tree/main/ofl/newsreader
+Local file: newsreader-latin.woff2
+Google Fonts CSS2 Latin variable webfont, normal, weights 400–500.
+License: Newsreader-OFL.txt
+
+Retrieved 2026-10-13. Files are self-hosted; the page does not call Google Fonts at runtime.
