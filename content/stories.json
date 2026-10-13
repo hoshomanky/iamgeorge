@@ -10,6 +10,11 @@
       "id": "his-words",
       "label": "说过的话",
       "labelEn": "His words"
+    },
+    {
+      "id": "names",
+      "label": "名字的故事",
+      "labelEn": "The stories behind names"
     }
   ],
   "stories": [
@@ -47,6 +52,42 @@
           "sourceLabel": "Edited from Dad’s account",
           "narrator": "Dad",
           "eventDateLabel": "Story date not yet recorded"
+        }
+      }
+    },
+    {
+      "id": "three-names",
+      "title": "洋芋的三个名字",
+      "excerpt": "方智灏、洋芋和 George，这三个名字是怎么来的。",
+      "paragraphs": [
+        "洋芋姓方，名智灏。按家族辈分，他是“政”字辈。",
+        "“智灏”这个名字，是师傅根据他的生辰八字取的。当时师傅说，他的八字很好，以后会很优秀，也说名字里补上了八字所缺的火。",
+        "我们叫他洋芋，是因为哥哥叫洋葱。用蔬菜给兄弟俩起小名，挺好玩的，也取了妈妈姓氏的谐音。",
+        "给他取英文名的时候，哥哥正好在看《小猪佩奇》。佩奇有个弟弟，叫乔治。正好洋芋也属猪，那就干脆叫 George 吧。"
+      ],
+      "tags": [
+        "names"
+      ],
+      "eventDate": null,
+      "eventDateLabel": "各名字确定的具体日期尚未注明",
+      "addedDate": "2026-10-13",
+      "sourceLabel": "根据爸爸的讲述整理",
+      "narrator": "爸爸",
+      "featured": false,
+      "relatedIds": [],
+      "translations": {
+        "en": {
+          "title": "The story behind his three names",
+          "excerpt": "How he came to be called Fang Zhihao, Yang Yu, and George.",
+          "paragraphs": [
+            "His full Chinese name was 方智灏, Fang Zhihao. Fang was his family name, and Zhihao his given name. In our family’s naming tradition, he belonged to the generation associated with the character 政, pronounced Zheng.",
+            "Zhihao was chosen by a traditional naming practitioner using his bazi, a Chinese birth chart. At the time, the practitioner said his bazi was very good and that he would grow up to be outstanding. He also said the name made up for the fire element missing from the chart.",
+            "We called him Yang Yu because his big brother was called Yang Cong. Yang Cong means onion, and Yang Yu means potato. Giving the brothers vegetable nicknames was fun, and the nicknames also echoed their mum’s surname.",
+            "When we were choosing an English name for him, his big brother happened to be watching Peppa Pig. Peppa has a little brother called George. Yang Yu was born in the Year of the Pig, too, so we thought we might as well call him George."
+          ],
+          "sourceLabel": "Edited from Dad’s account",
+          "narrator": "Dad",
+          "eventDateLabel": "The exact dates when the names were chosen are not recorded"
         }
       }
     }
