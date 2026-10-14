@@ -95,7 +95,7 @@
     $('#preview-count').textContent = content.counts(entries);
     $('#preview-count').hidden = !entries.length;
     content.preview($('#preview-content'), entries, dateValue());
-    $('#open-day').href = `day.html?date=${dateValue()}&lang=${i18n.lang}&from=wall`;
+    $('#open-day').href = window.GeorgeRoutes.localize(`day.html?date=${dateValue()}&from=wall`,i18n.lang);
   };
   const renderSelection = () => {
     if (!data) return;

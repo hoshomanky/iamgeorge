@@ -44,7 +44,18 @@
   const query = new URLSearchParams(window.location.search).get('lang');
   let saved;
   try { saved = localStorage.getItem('iamgeorge-language'); } catch {}
-  let language = supported(query) ? query : supported(saved) ? saved : 'zh';
+  const routes = window.GeorgeRoutes;
+  const renderedLanguage = document.body?.dataset.staticLang;
+  let language = supported(query) ? query : supported(renderedLanguage) ? renderedLanguage : supported(saved) ? saved : 'zh';
+  if (routes) {
+    const target = routes.localize(window.location.href, language);
+    const currentPath = routes.comparable(window.location.href).split(/[?#]/)[0];
+    const targetPath = routes.comparable(target).split(/[?#]/)[0];
+    if (currentPath !== targetPath) window.location.replace(target);
+    else if (routes.comparable(target) !== routes.comparable(window.location.href)) {
+      try { window.history.replaceState(window.history.state, '', target); } catch {}
+    }
+  }
   if (supported(query)) { try { localStorage.setItem('iamgeorge-language', language); } catch {} }
   document.documentElement.lang = language === 'en' ? 'en' : 'zh-CN';
   const t = (key, variables = {}) => {
@@ -59,12 +70,19 @@
     ['aria-label', 'title', 'placeholder', 'content', 'alt'].forEach((attribute) => {
       document.querySelectorAll(`[data-i18n-${attribute}]`).forEach((element) => { element.setAttribute(attribute, t(element.getAttribute(`data-i18n-${attribute}`))); });
     });
-    document.querySelectorAll('[data-set-lang]').forEach((button) => { button.setAttribute('aria-pressed', String(button.dataset.setLang === language)); });
+    document.querySelectorAll('[data-set-lang]').forEach((button) => {
+      if (button.tagName === 'A') {
+        button.href = routes.localize(window.location.href, button.dataset.setLang);
+        if (button.dataset.setLang === language) button.setAttribute('aria-current', 'true');
+        else button.removeAttribute('aria-current');
+      } else button.setAttribute('aria-pressed', String(button.dataset.setLang === language));
+    });
     if (document.body?.dataset.i18nTitle) document.title = t(document.body.dataset.i18nTitle);
     // Preserve the destination path, story ID, filter query, and anchor.
     document.querySelectorAll('a[href]').forEach((link) => {
       const href = link.getAttribute('href');
-      if (!href || href.startsWith('#') || link.hasAttribute('download')) return;
+      if (!href || href.startsWith('#') || link.hasAttribute('download') || link.hasAttribute('data-set-lang')) return;
+      if (routes) { link.setAttribute('href', routes.localize(href, language)); return; }
       try {
         const url = new URL(href, window.location.href);
         if (url.origin !== window.location.origin || !/\.html$/.test(url.pathname)) return;
@@ -74,7 +92,12 @@
     });
   };
   const setLanguage = (lang) => {
-    if (!supported(lang)) return;
+    if (!supported(lang) || lang === language) return;
+    if (routes) {
+      try { localStorage.setItem('iamgeorge-language', lang); } catch {}
+      window.location.assign(routes.localize(window.location.href, lang));
+      return;
+    }
     language = lang;
     try { localStorage.setItem('iamgeorge-language', lang); } catch {}
     const url = new URL(window.location.href);
@@ -86,7 +109,7 @@
   window.GeorgeI18n = { get lang() { return language; }, t, refresh };
   document.addEventListener('click', (event) => {
     const button = event.target.closest('[data-set-lang]');
-    if (button) setLanguage(button.dataset.setLang);
+    if (button) { event.preventDefault(); setLanguage(button.dataset.setLang); }
   });
   refresh();
 })();

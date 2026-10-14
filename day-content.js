@@ -75,13 +75,13 @@
       return count ? t(key, { count, noun: count === 1 ? singular : plural }) : '';
     }).filter(Boolean).join(' · ');
   };
-  const storyHref = (id, date) => `story.html?id=${encodeURIComponent(id)}&lang=${i18n.lang}${date ? `&day=${date}` : ''}`;
-  const dayHref = (date) => `day.html?date=${date}&lang=${i18n.lang}&from=wall`;
+  const storyHref = (id, date) => `${window.GeorgeRoutes.story(id, i18n.lang)}${date ? `?day=${date}` : ''}`;
+  const dayHref = (date) => window.GeorgeRoutes.localize(`day.html?date=${date}&from=wall`, i18n.lang);
   const dimensionCache = new Map();
   const image = (item, className) => {
     const img = make('img', className);
     const text = localized(item);
-    let dimensions = dimensionCache.get(item.file);
+    let dimensions = item.width > 0 && item.height > 0 ? { width: item.width, height: item.height } : dimensionCache.get(item.file);
     if (!dimensions) { try { dimensions = JSON.parse(sessionStorage.getItem(`iamgeorge:image:${item.file}`)); } catch {} }
     if (dimensions?.width > 0 && dimensions?.height > 0) { img.width = dimensions.width; img.height = dimensions.height; }
     img.src = item.file;
@@ -237,5 +237,12 @@
     }
   };
   document.addEventListener('iamgeorge:languagechange', () => { if (viewer?.open) renderViewer(); });
-  window.GeorgeDayContent = { load, validate, entriesForDate, counts, preview, renderFull, isDate };
+  const enhanceGallery = (container, gallery) => {
+    container.querySelectorAll('[data-gallery-id]').forEach((link) => {
+      const index = gallery.findIndex((item) => item.id === link.dataset.galleryId);
+      if (index < 0) return;
+      link.addEventListener('click', (event) => { event.preventDefault(); openGallery(gallery, index, link); });
+    });
+  };
+  window.GeorgeDayContent = { load, validate, entriesForDate, counts, preview, renderFull, isDate, enhanceGallery };
 })();

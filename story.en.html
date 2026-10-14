@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GWDH92PG49"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-GWDH92PG49');
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fbf7ee">
+  <meta name="description" content="A little story about George, edited from his dad’s own account.">
+  <title>A little story · I AM GEORGE</title>
+  <link rel="icon" href="assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="styles.css?v=static-content-1">
+  <link rel="stylesheet" href="stories.css">
+  <link rel="stylesheet" href="bilingual.css">
+  <link rel="stylesheet" href="typography.css">
+  <script src="site-routes.js" defer></script>
+  <script src="i18n.js" defer></script>
+  <script src="stories.js" defer></script>
+</head><body data-story-page="detail" data-i18n-title="detailTitle" data-static-lang="en" data-rendered-page="story" title="A little story · I AM GEORGE">
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="/index.en#top" data-i18n-aria-label="brandHome" aria-label="IAMGEORGE home">
+      <svg class="brand-flower" aria-hidden="true"><use href="assets/stickers.svg#flower"></use></svg>
+      <span><strong>I AM GEORGE<span class="brand-dot">.</span></strong><small data-i18n="brandSubtitle">George’s little world</small></span>
+    </a>
+    <nav data-i18n-aria-label="mainNav" aria-label="Main navigation">
+      <a href="/stories.en" aria-current="page">Little stories</a><a href="/index.en#creations" data-i18n="navCreations">Little gallery</a><a href="/index.en#memories" data-i18n="navMemories">Moments to keep</a><a href="/index.en#letters" data-i18n="navLetters">Letters to George</a>
+    </nav>
+    <div class="header-tools"><div class="language-switch" role="group" data-i18n-aria-label="languageGroup" aria-label="Reading language"><a data-set-lang="zh" lang="zh-CN" href="/story">中文</a><a data-set-lang="en" lang="en" href="/story.en" aria-current="true">EN</a></div><div class="paper-control">
+      <button id="paper-toggle" class="paper-toggle" aria-expanded="false" aria-controls="paper-palette" data-i18n-title="paperChangeTitle" title="Choose a paper color">
+        <span class="palette-dots" aria-hidden="true"><i></i><i></i><i></i></span><span data-i18n="paperToggle">Paper color</span>
+      </button>
+      <div id="paper-palette" class="paper-palette" hidden>
+        <span data-i18n="paperTitle">Which paper today?</span>
+        <div role="group" data-i18n-aria-label="paperGroup" aria-label="Page paper color">
+          <button class="paper-swatch selected" data-paper="cream" data-i18n-aria-label="paperCream" aria-label="Cream" aria-pressed="true"></button>
+          <button class="paper-swatch" data-paper="blue" data-i18n-aria-label="paperBlue" aria-label="Pale blue" aria-pressed="false"></button>
+          <button class="paper-swatch" data-paper="pink" data-i18n-aria-label="paperPink" aria-label="Soft pink" aria-pressed="false"></button>
+          <button class="paper-swatch" data-paper="green" data-i18n-aria-label="paperGreen" aria-label="Light green" aria-pressed="false"></button>
+        </div>
+      </div>
+    </div></div>
+  </header>
+
+
+  <main id="main" class="wrap story-detail-main">
+    <a id="story-back" class="back-link" href="/stories.en?view=themes" data-i18n="backStorybook">← Back to the storybook</a>
+    <p id="detail-status" class="detail-status" role="status" aria-live="polite">正在翻开这一页……</p>
+    <article id="story-article" class="story-reading-paper" aria-labelledby="detail-title" hidden>
+      <span class="paper-tape" aria-hidden="true"></span><svg class="reading-sticker" aria-hidden="true"><use href="assets/stickers.svg#flower"></use></svg>
+      <header class="reading-header"><p class="eyebrow" id="detail-narrator">家人记得的一个小片段</p><h1 id="detail-title"></h1><div id="detail-tags" class="story-card-tags"></div><p id="detail-event-date" class="detail-date"></p><a id="story-day-link" class="story-day-link" href="#" hidden data-i18n="seeThisDay">See this day →</a></header>
+      <div id="detail-paragraphs" class="story-paragraphs"></div>
+      <footer class="reading-source"><p id="detail-source"></p><p id="detail-added-date"></p></footer>
+    </article>
+    <div id="story-share" class="story-share" hidden><button id="copy-story-link" class="button button-dark" type="button"><span data-i18n="copyStoryLink">Copy this story’s link</span> <span aria-hidden="true">↗</span></button><p id="share-status" role="status" aria-live="polite"></p><label id="manual-copy-label" class="manual-copy-label" for="manual-story-link" hidden data-i18n="manualCopy">Select the link below to copy it manually.</label><input id="manual-story-link" class="manual-story-link" type="url" readonly hidden aria-labelledby="manual-copy-label"></div>
+    <nav id="story-neighbours" class="story-neighbours" data-i18n-aria-label="continueStories" aria-label="Continue reading" hidden></nav>
+    <section id="related-stories" class="related-stories" aria-labelledby="related-title" hidden><h2 id="related-title" data-i18n="relatedTitle">More little stories</h2><div id="related-story-links"></div></section>
+    <div id="detail-message" class="collection-message" hidden><svg aria-hidden="true"><use href="assets/stickers.svg#cloud"></use></svg><h1 id="detail-message-title"></h1><p id="detail-message-text"></p><button id="detail-retry" class="button button-dark" type="button" hidden data-i18n="retry">Try opening it again</button><a class="detail-return" href="/stories.en?view=themes"><span data-i18n="returnStorybook">Back to the storybook</span> <span aria-hidden="true">↗</span></a></div>
+    <noscript><p class="no-script-note"><span>请启用浏览器的 JavaScript 来阅读这一页。</span> <a href="/index.en#story">也可以先回首页读这个小片段。</a><br><span lang="en">Enable JavaScript to read this page, or read the little moment on the home page.</span></p></noscript>
+  </main>
+
+  <footer class="site-footer wrap"><div class="footer-name"><svg aria-hidden="true"><use href="assets/stickers.svg#flower"></use></svg><div><strong>George Fang · 方智灏 · 洋芋</strong><span>2019.10.31 — 2025.11.23</span></div></div><p>He was here. He was loved. His story remains.<br><span data-i18n="footerStory">We’ll tell his story, a little at a time.</span></p><div class="footer-links"><a class="footer-about footer-share" href="/index.en#share-memory" data-i18n="shareMemoryFooter">Share a memory</a><a class="footer-about" href="/about.en" data-i18n="navAbout">About IAMGEORGE</a><a class="footer-top" href="#main" data-i18n-aria-label="backTop" aria-label="Back to top">↑</a></div></footer>
+
+</body></html>

@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GWDH92PG49"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-GWDH92PG49');
+  </script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fbf7ee">
+  <meta name="description" content="Open a day in George’s life and explore the stories and memories shared for it.">
+  <title>Day by day · I AM GEORGE</title>
+  <link rel="icon" href="assets/favicon-96.png" type="image/png" sizes="96x96">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="styles.css?v=static-content-1">
+  <link rel="stylesheet" href="stories.css">
+<link rel="stylesheet" href="days.css">
+  <link rel="stylesheet" href="bilingual.css">
+  <link rel="stylesheet" href="typography.css">
+  <script src="site-routes.js" defer></script>
+  <script src="i18n.js" defer></script>
+  <script src="day-content.js" defer></script>
+<script src="days.js" defer></script>
+</head><body data-day-page="detail" data-i18n-title="dayTitle" data-static-lang="en" data-rendered-page="day" title="Day by day · I AM GEORGE">
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="/index.en#top" data-i18n-aria-label="brandHome" aria-label="IAMGEORGE home">
+      <svg class="brand-flower" aria-hidden="true"><use href="assets/stickers.svg#flower"></use></svg>
+      <span><strong>I AM GEORGE<span class="brand-dot">.</span></strong><small data-i18n="brandSubtitle">George’s little world</small></span>
+    </a>
+    <nav data-i18n-aria-label="mainNav" aria-label="Main navigation">
+      <a href="/stories.en" aria-current="page">Little stories</a><a href="/index.en#creations" data-i18n="navCreations">Little gallery</a><a href="/index.en#memories" data-i18n="navMemories">Moments to keep</a><a href="/index.en#letters" data-i18n="navLetters">Letters to George</a>
+    </nav>
+    <div class="header-tools"><div class="language-switch" role="group" data-i18n-aria-label="languageGroup" aria-label="Reading language"><a data-set-lang="zh" lang="zh-CN" href="/day">中文</a><a data-set-lang="en" lang="en" href="/day.en" aria-current="true">EN</a></div><div class="paper-control">
+      <button id="paper-toggle" class="paper-toggle" aria-expanded="false" aria-controls="paper-palette" data-i18n-title="paperChangeTitle" title="Choose a paper color">
+        <span class="palette-dots" aria-hidden="true"><i></i><i></i><i></i></span><span data-i18n="paperToggle">Paper color</span>
+      </button>
+      <div id="paper-palette" class="paper-palette" hidden>
+        <span data-i18n="paperTitle">Which paper today?</span>
+        <div role="group" data-i18n-aria-label="paperGroup" aria-label="Page paper color">
+          <button class="paper-swatch selected" data-paper="cream" data-i18n-aria-label="paperCream" aria-label="Cream" aria-pressed="true"></button>
+          <button class="paper-swatch" data-paper="blue" data-i18n-aria-label="paperBlue" aria-label="Pale blue" aria-pressed="false"></button>
+          <button class="paper-swatch" data-paper="pink" data-i18n-aria-label="paperPink" aria-label="Soft pink" aria-pressed="false"></button>
+          <button class="paper-swatch" data-paper="green" data-i18n-aria-label="paperGreen" aria-label="Light green" aria-pressed="false"></button>
+        </div>
+      </div>
+    </div></div>
+  </header>
+
+  <main id="main" class="wrap day-detail-main">
+    <a id="back-to-calendar" class="back-link" href="/stories.en?view=days" data-i18n="backCalendar">← Back to day by day</a>
+    <article class="day-reading-paper" aria-labelledby="day-title"><span class="paper-tape" aria-hidden="true"></span><p class="eyebrow">ONE DAY AT A TIME</p><h1 id="day-title" data-i18n="loadingDay">Opening this day…</h1><p id="day-subtitle" class="day-subtitle" data-i18n="dayPlace">A place for every day.</p><p id="day-content-count" class="day-content-count" hidden></p><div id="day-entries"></div><div id="day-error" class="day-error" hidden><p id="day-error-text"></p><button id="retry-day" class="button button-dark" type="button" data-i18n="retry">Try opening it again</button></div></article>
+    <nav id="day-neighbours" class="day-neighbours" data-i18n-aria-label="continueDays" aria-label="Continue through the days"><a id="previous-day" href="#" data-i18n="previousDay">← Previous day</a><a id="next-day" href="#" data-i18n="nextDay">Next day →</a></nav>
+    <div class="day-share"><button id="copy-day-link" class="button button-dark" type="button" data-i18n="copyDayLink">Copy link to this day</button><p id="day-share-status" role="status" aria-live="polite"></p><label id="manual-day-link-label" for="manual-day-link" hidden data-i18n="manualCopy">Select the link below to copy it manually.</label><input id="manual-day-link" type="url" readonly hidden aria-labelledby="manual-day-link-label"></div>
+    <noscript><p class="no-script-note">请启用 JavaScript 阅读这一天。<br><span lang="en">Enable JavaScript to read this day.</span></p></noscript>
+  </main>
+  <footer class="site-footer wrap"><div class="footer-name"><svg aria-hidden="true"><use href="assets/stickers.svg#flower"></use></svg><div><strong>George Fang · 方智灏 · 洋芋</strong><span>2019.10.31 — 2025.11.23</span></div></div><p>He was here. He was loved. His story remains.<br><span data-i18n="footerStory">We’ll tell his story, a little at a time.</span></p><div class="footer-links"><a class="footer-about footer-share" href="/index.en#share-memory" data-i18n="shareMemoryFooter">Share a memory</a><a class="footer-about" href="/about.en" data-i18n="navAbout">About IAMGEORGE</a><a class="footer-top" href="#main" data-i18n-aria-label="backTop" aria-label="Back to top">↑</a></div></footer>
+
+</body></html>

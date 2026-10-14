@@ -25,8 +25,8 @@
   const labelDate = (value) => i18n.lang === 'en'
     ? new Intl.DateTimeFormat('en-US', { dateStyle: 'long', timeZone: 'UTC' }).format(asDate(value))
     : `${value.slice(0, 4)} 年 ${Number(value.slice(5, 7))} 月 ${Number(value.slice(8))} 日`;
-  const dayHref = (value) => `day.html?date=${value}&lang=${i18n.lang}`;
-  const calendarHref = (value) => `stories.html?view=days&date=${value}&restore=1&lang=${i18n.lang}`;
+  const dayHref = (value) => window.GeorgeRoutes.day(value, i18n.lang);
+  const calendarHref = (value) => `${window.GeorgeRoutes.page("stories",i18n.lang)}?view=days&date=${value}&restore=1`;
   const setupPaper = () => {
     if (!$('#paper-toggle')) return;
     const colors = { cream: '#fbf7ee', blue: '#eef5fa', pink: '#fcf0ee', green: '#f0f5e9' };
@@ -65,7 +65,7 @@
   const setupDetail = () => {
     const content = window.GeorgeDayContent;
     const query = new URLSearchParams(window.location.search);
-    const requested = query.get('date');
+    const requested = document.body.dataset.contentId || query.get('date');
     const scrollKey = `iamgeorge:day:${requested}`;
     let data, error = false, restored = false;
     const saveScroll = () => {
@@ -122,9 +122,7 @@
     };
     $('#retry-day').addEventListener('click', getData);
     $('#copy-day-link').addEventListener('click', async () => {
-      const url = new URL('day.html', window.location.href);
-      url.searchParams.set('date', requested);
-      url.searchParams.set('lang', i18n.lang);
+      const url = new URL(window.GeorgeRoutes.shareDay(requested, i18n.lang));
       try {
         if (!navigator.clipboard?.writeText) throw new Error('Clipboard unavailable');
         await navigator.clipboard.writeText(url.href);
@@ -147,8 +145,18 @@
       const status = $('#day-share-status');
       if (status.dataset.message) status.textContent = t(status.dataset.message);
       const input = $('#manual-day-link');
-      if (input.value) { const url = new URL(input.value); url.searchParams.set('lang', i18n.lang); input.value = url.href; }
+      if (input.value) input.value = window.GeorgeRoutes.shareDay(requested, i18n.lang);
     });
+    if (document.body.dataset.contentId) {
+      const gallery = JSON.parse($('#day-gallery-data').textContent);
+      content.enhanceGallery($('#day-entries'), gallery);
+      if (query.get('restore') === '1') {
+        let position;
+        try { position = Number(sessionStorage.getItem(scrollKey)); } catch {}
+        if (Number.isFinite(position)) requestAnimationFrame(() => requestAnimationFrame(() => window.scrollTo({top:position,behavior:'instant'})));
+      }
+      return;
+    }
     if (!isDate(requested)) { render(); return; }
     getData();
   };

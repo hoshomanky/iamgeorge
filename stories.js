@@ -24,7 +24,7 @@
     const [year, month, day] = value.split('-');
     return `${year} 年 ${Number(month)} 月 ${Number(day)} 日`;
   };
-  const storyHref = (id) => `story.html?id=${encodeURIComponent(id)}&lang=${i18n.lang}`;
+  const storyHref = (id) => window.GeorgeRoutes.story(id, i18n.lang);
   const eventLabel = (story) => story.eventDate ? prettyDate(story.eventDate) : localized(story).eventDateLabel || t('itemDateUnknown');
   const addEventDate = (element, story) => {
     if (story.eventDate) {
@@ -201,7 +201,7 @@
         const link = make('a');
         link.href = story.type === 'story' ? storyHref(story.id)
           : story.eventDate && story.eventDate >= data.calendar.start && story.eventDate <= data.calendar.end
-            ? `day.html?date=${story.eventDate}&lang=${i18n.lang}` : story.file;
+            ? window.GeorgeRoutes.day(story.eventDate, i18n.lang) : story.file;
         const top = make('div', 'story-card-topline');
         const kind = { story: 'dayStory', photo: 'dayPhoto', art: 'dayArt', audio: 'dayAudio', video: 'dayVideo' }[story.type];
         top.append(make('span', '', t(kind)), sticker(icons[index % icons.length]));
@@ -259,7 +259,7 @@
       } catch {
         data = undefined;
         loadState = 'failed';
-        grid.replaceChildren();
+        if (!document.body.dataset.staticLang) grid.replaceChildren();
         $('#story-controls').hidden = true;
         status.textContent = t('unavailableBook');
         showMessage('unavailableTitle', 'unavailableText', 'retry', load);
@@ -290,7 +290,7 @@
   };
 
   const setupDetail = () => {
-    const id = new URLSearchParams(window.location.search).get('id');
+    const id = document.body.dataset.contentId || new URLSearchParams(window.location.search).get('id');
     const status = $('#detail-status');
     const message = $('#detail-message');
     const retry = $('#detail-retry');
@@ -326,7 +326,7 @@
         const originDay = new URLSearchParams(window.location.search).get('day');
         const back = $('#story-back');
         if (back && isDate(originDay) && originDay >= data.calendar.start && originDay <= data.calendar.end) {
-          back.href = `day.html?date=${originDay}&lang=${i18n.lang}&restore=1`;
+          back.href = window.GeorgeRoutes.localize(`day.html?date=${originDay}&restore=1`, i18n.lang);
           back.dataset.i18n = 'backToDay';
           back.textContent = t('backToDay');
         }
@@ -340,7 +340,7 @@
         const dayLink = $('#story-day-link');
         const inCalendar = story.eventDate && story.eventDate >= data.calendar.start && story.eventDate <= data.calendar.end;
         dayLink.hidden = !inCalendar;
-        if (inCalendar) dayLink.href = `day.html?date=${story.eventDate}&lang=${i18n.lang}`;
+        if (inCalendar) dayLink.href = window.GeorgeRoutes.day(story.eventDate, i18n.lang);
         $('#detail-paragraphs').replaceChildren(...text.paragraphs.map((paragraph) => make('p', '', paragraph)));
         $('#detail-source').textContent = text.sourceLabel;
         $('#detail-narrator').textContent = t('narratorMoment', { narrator: text.narrator });
@@ -378,9 +378,7 @@
     };
     retry.addEventListener('click', load);
     $('#copy-story-link').addEventListener('click', async () => {
-      const url = new URL('story.html', window.location.href);
-      url.searchParams.set('id', id);
-      url.searchParams.set('lang', i18n.lang);
+      const url = new URL(window.GeorgeRoutes.shareStory(id, i18n.lang));
       const shareStatus = $('#share-status');
       try {
         if (!navigator.clipboard?.writeText) throw new Error('Clipboard unavailable');
@@ -406,11 +404,18 @@
       if (shareStatus.dataset.message) shareStatus.textContent = t(shareStatus.dataset.message);
       const input = $('#manual-story-link');
       if (input.value) {
-        const url = new URL(input.value);
-        url.searchParams.set('lang', i18n.lang);
-        input.value = url.href;
+        input.value = window.GeorgeRoutes.shareStory(id, i18n.lang);
       }
     });
+    if (document.body.dataset.contentId) {
+      const originDay = new URLSearchParams(window.location.search).get('day');
+      if (isDate(originDay)) {
+        const back = $('#story-back');
+        back.href = window.GeorgeRoutes.localize(`day.html?date=${originDay}&restore=1`, i18n.lang);
+        back.textContent = t('backToDay');
+      }
+      return;
+    }
     load();
   };
 
