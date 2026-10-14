@@ -28,6 +28,13 @@
           "kindergarten-helper-2025-10-13",
           "photo-undated-reading-heic"
         ]
+      },
+      {
+        "date": "2025-10-14",
+        "itemIds": [
+          "photo-2025-10-14-lift-02",
+          "mum-phone-in-lift-2025-10-14"
+        ]
       }
     ]
   },
@@ -145,6 +152,41 @@
           "eventDateLabel": "13 October 2025"
         }
       }
+    },
+    {
+      "id": "mum-phone-in-lift-2025-10-14",
+      "type": "story",
+      "title": "仰头看看妈妈的手机",
+      "excerpt": "上学前的电梯里，洋芋背着书包，仰起头去看妈妈的手机。",
+      "paragraphs": [
+        "2025年10月14日早上，妈妈送洋芋去上学，在电梯里拍下了这段小视频。",
+        "洋芋穿着红色外套，背着书包，站在妈妈身旁。妈妈举着手机对着镜子拍，他往妈妈身边凑了凑，探过身子，仰起头去看手机。",
+        "看他伸长脖子的样子，真可爱。"
+      ],
+      "tags": [
+        "daily-life"
+      ],
+      "eventDate": "2025-10-14",
+      "eventDateLabel": "2025年10月14日",
+      "addedDate": "2026-10-15",
+      "sourceLabel": "根据爸爸的讲述与提供的视频画面整理",
+      "narrator": "爸爸",
+      "featured": false,
+      "relatedIds": [],
+      "translations": {
+        "en": {
+          "title": "Looking up at Mum’s phone",
+          "excerpt": "In the lift on the way to school, Yang Yu had his schoolbag on his back and tilted his head up to look at Mum’s phone.",
+          "paragraphs": [
+            "On the morning of 14 October 2025, Mum was taking Yang Yu to school and filmed this short clip in the lift.",
+            "Yang Yu was wearing a red jacket and had his schoolbag on his back, standing beside Mum. As Mum held up her phone to film them in the mirror, he moved a little closer, leaned over and tilted his head up to look at the phone.",
+            "He looks so sweet with his neck stretched up like that."
+          ],
+          "sourceLabel": "Edited from Dad’s account and the supplied video images",
+          "narrator": "Dad",
+          "eventDateLabel": "14 October 2025"
+        }
+      }
     }
   ],
   "media": [
@@ -197,6 +239,31 @@
       },
       "width": 1200,
       "height": 1600
+    },
+    {
+      "id": "photo-2025-10-14-lift-02",
+      "type": "photo",
+      "title": "仰头看妈妈的手机",
+      "caption": "洋芋探过身子，仰起头。照片经 AI 去除电梯门缝并调色。",
+      "alt": "洋芋穿着红色外套、背着书包，伸长脖子向上看。",
+      "file": "assets/photos/2025-10-14-looking-up-at-mums-phone-ai-restored.png",
+      "tags": [
+        "daily-life"
+      ],
+      "eventDate": "2025-10-14",
+      "addedDate": "2026-10-15",
+      "relatedIds": [
+        "mum-phone-in-lift-2025-10-14"
+      ],
+      "translations": {
+        "en": {
+          "title": "Looking up at Mum’s phone",
+          "caption": "Yang Yu leans over and tilts his head up. The photo has been edited with AI to remove the lift-door seam and adjust its colours.",
+          "alt": "Yang Yu, wearing a red jacket and a schoolbag, cranes his neck to look up."
+        }
+      },
+      "width": 1086,
+      "height": 1448
     }
   ]
 }
