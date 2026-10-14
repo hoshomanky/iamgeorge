@@ -20,7 +20,16 @@
   "calendar": {
     "start": "2019-10-31",
     "end": "2025-11-23",
-    "days": []
+    "days": [
+      {
+        "date": "2025-10-13",
+        "itemIds": [
+          "photo-2025-10-13-collage",
+          "kindergarten-helper-2025-10-13",
+          "photo-undated-reading-heic"
+        ]
+      }
+    ]
   },
   "stories": [
     {
@@ -97,7 +106,93 @@
           "eventDateLabel": "The exact dates when the names were chosen are not recorded"
         }
       }
+    },
+    {
+      "id": "kindergarten-helper-2025-10-13",
+      "type": "story",
+      "title": "当小标兵的这一天",
+      "excerpt": "白天，洋芋在幼儿园当小标兵。晚上，他坐在椅子上读书，笑得很开心。",
+      "paragraphs": [
+        "2025年10月13日，洋芋在幼儿园当小标兵。",
+        "幼儿园每天会有两位小朋友值日，负责给入园的小朋友测量体温，帮大家洗手、消毒。",
+        "照片里，洋芋穿着红色的衣服，戴着蓝色绶带，拿着体温计给一位小朋友测体温。",
+        "洋芋从小班入园，如今已经读到大班，快要毕业了。看着他当小标兵的这些照片，我觉得他很自信。",
+        "到了晚上，洋芋坐在椅子上，手里摊着书，笑得很开心。"
+      ],
+      "tags": [
+        "daily-life"
+      ],
+      "eventDate": "2025-10-13",
+      "eventDateLabel": "2025年10月13日",
+      "addedDate": "2026-10-14",
+      "sourceLabel": "根据爸爸的讲述整理",
+      "narrator": "爸爸",
+      "featured": false,
+      "relatedIds": [],
+      "translations": {
+        "en": {
+          "title": "A day as a kindergarten helper",
+          "excerpt": "Yang Yu was on duty as a kindergarten helper that day. That evening, he sat in a chair with a book, smiling happily.",
+          "paragraphs": [
+            "On 13 October 2025, Yang Yu was on duty as a helper at kindergarten.",
+            "Two children take on this role each day. They check the temperatures of children arriving at kindergarten and help them wash and sanitise their hands.",
+            "In the photos, Yang Yu is wearing red clothes and a blue sash, holding a thermometer to check another child’s temperature.",
+            "Yang Yu started in the youngest class. Now he is in the oldest class and will soon be finishing kindergarten. Looking at these photos of him on duty, I think he looks very confident.",
+            "That evening, Yang Yu sat in a chair with a book open in his hands, smiling happily."
+          ],
+          "sourceLabel": "Edited from Dad’s account",
+          "narrator": "Dad",
+          "eventDateLabel": "13 October 2025"
+        }
+      }
     }
   ],
-  "media": []
+  "media": [
+    {
+      "id": "photo-2025-10-13-collage",
+      "type": "photo",
+      "title": "白天的小标兵",
+      "caption": "洋芋在幼儿园当小标兵。",
+      "alt": "三张照片组成的拼图，洋芋穿红衣、戴蓝绶带，在消毒装置旁伸出手、靠着柱子站立，并为一位小朋友测量体温。",
+      "file": "assets/photos/2025-10-13-kindergarten-helper.jpg",
+      "tags": [
+        "daily-life"
+      ],
+      "eventDate": "2025-10-13",
+      "addedDate": "2026-10-14",
+      "relatedIds": [
+        "kindergarten-helper-2025-10-13"
+      ],
+      "translations": {
+        "en": {
+          "title": "On duty at kindergarten",
+          "caption": "Yang Yu on duty as a kindergarten helper.",
+          "alt": "A collage of three photos showing Yang Yu in red clothes and a blue sash, holding out his hand beside a sanitiser dispenser, standing against a pillar, and checking another child’s temperature."
+        }
+      }
+    },
+    {
+      "id": "photo-undated-reading-heic",
+      "type": "photo",
+      "title": "晚上的读书时光",
+      "caption": "到了晚上，洋芋坐在椅子上，手里摊着书，笑得很开心。",
+      "alt": "洋芋坐在书架前的椅子上，手里摊着一本书，脸上带着笑容。",
+      "file": "assets/photos/2025-10-13-evening-reading.jpg",
+      "tags": [
+        "daily-life"
+      ],
+      "eventDate": "2025-10-13",
+      "addedDate": "2026-10-14",
+      "relatedIds": [
+        "kindergarten-helper-2025-10-13"
+      ],
+      "translations": {
+        "en": {
+          "title": "Reading that evening",
+          "caption": "That evening, Yang Yu sat in a chair with a book open in his hands, smiling happily.",
+          "alt": "Yang Yu sitting in a chair in front of bookshelves, holding an open book and smiling."
+        }
+      }
+    }
+  ]
 }
