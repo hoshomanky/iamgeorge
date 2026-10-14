@@ -34,18 +34,18 @@
   </header>
 
   <main id="main" class="wrap story-detail-main">
-    <a class="back-link" href="stories.html" data-i18n="backStorybook">← 回到小小故事册</a>
+    <a id="story-back" class="back-link" href="stories.html?view=themes" data-i18n="backStorybook">← 回到小小故事册</a>
     <p id="detail-status" class="detail-status" role="status" aria-live="polite">正在翻开这一页……</p>
     <article id="story-article" class="story-reading-paper" aria-labelledby="detail-title" hidden>
       <span class="paper-tape" aria-hidden="true"></span><svg class="reading-sticker" aria-hidden="true"><use href="assets/stickers.svg#flower"></use></svg>
-      <header class="reading-header"><p class="eyebrow" id="detail-narrator">家人记得的一个小片段</p><h1 id="detail-title"></h1><div id="detail-tags" class="story-card-tags"></div><p id="detail-event-date" class="detail-date"></p></header>
+      <header class="reading-header"><p class="eyebrow" id="detail-narrator">家人记得的一个小片段</p><h1 id="detail-title"></h1><div id="detail-tags" class="story-card-tags"></div><p id="detail-event-date" class="detail-date"></p><a id="story-day-link" class="story-day-link" href="#" data-i18n="seeThisDay" hidden>看看这一天 →</a></header>
       <div id="detail-paragraphs" class="story-paragraphs"></div>
       <footer class="reading-source"><p id="detail-source"></p><p id="detail-added-date"></p></footer>
     </article>
     <div id="story-share" class="story-share" hidden><button id="copy-story-link" class="button button-dark" type="button"><span data-i18n="copyStoryLink">复制这个故事的链接</span> <span aria-hidden="true">↗</span></button><p id="share-status" role="status" aria-live="polite"></p><label id="manual-copy-label" class="manual-copy-label" for="manual-story-link" data-i18n="manualCopy" hidden>可以选中下面的链接，手动复制。</label><input id="manual-story-link" class="manual-story-link" type="url" readonly hidden aria-labelledby="manual-copy-label"></div>
     <nav id="story-neighbours" class="story-neighbours" data-i18n-aria-label="continueStories" aria-label="继续读故事" hidden></nav>
     <section id="related-stories" class="related-stories" aria-labelledby="related-title" hidden><h2 id="related-title" data-i18n="relatedTitle">还可以读读</h2><div id="related-story-links"></div></section>
-    <div id="detail-message" class="collection-message" hidden><svg aria-hidden="true"><use href="assets/stickers.svg#cloud"></use></svg><h1 id="detail-message-title"></h1><p id="detail-message-text"></p><button id="detail-retry" class="button button-dark" type="button" data-i18n="retry" hidden>重新翻开</button><a class="detail-return" href="stories.html"><span data-i18n="returnStorybook">回到小小故事册</span> <span aria-hidden="true">↗</span></a></div>
+    <div id="detail-message" class="collection-message" hidden><svg aria-hidden="true"><use href="assets/stickers.svg#cloud"></use></svg><h1 id="detail-message-title"></h1><p id="detail-message-text"></p><button id="detail-retry" class="button button-dark" type="button" data-i18n="retry" hidden>重新翻开</button><a class="detail-return" href="stories.html?view=themes"><span data-i18n="returnStorybook">回到小小故事册</span> <span aria-hidden="true">↗</span></a></div>
     <noscript><p class="no-script-note"><span>请启用浏览器的 JavaScript 来阅读这一页。</span> <a href="index.html#story">也可以先回首页读这个小片段。</a><br><span lang="en">Enable JavaScript to read this page, or read the little moment on the home page.</span></p></noscript>
   </main>
 

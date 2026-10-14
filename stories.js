@@ -25,7 +25,7 @@
     return `${year} 年 ${Number(month)} 月 ${Number(day)} 日`;
   };
   const storyHref = (id) => `story.html?id=${encodeURIComponent(id)}&lang=${i18n.lang}`;
-  const eventLabel = (story) => story.eventDate ? prettyDate(story.eventDate) : localized(story).eventDateLabel || t('dateUnknown');
+  const eventLabel = (story) => story.eventDate ? prettyDate(story.eventDate) : localized(story).eventDateLabel || t('itemDateUnknown');
   const addEventDate = (element, story) => {
     if (story.eventDate) {
       const time = make('time', '', eventLabel(story));
@@ -44,7 +44,7 @@
 
   // Public data contains only reviewed stories. Private material stays outside dist.
   const validateCollection = (data) => {
-    if (!data || data.version !== 1 || !Array.isArray(data.tags) || !Array.isArray(data.stories)) throw new Error('Invalid collection');
+    if (!data || data.version !== 1 || !Array.isArray(data.tags) || !Array.isArray(data.stories) || !Array.isArray(data.media)) throw new Error('Invalid collection');
     const tagIds = new Set();
     const storyIds = new Set();
     data.tags.forEach((tag) => {
@@ -63,6 +63,17 @@
       storyIds.add(story.id);
     });
     if (!data.stories.every((story) => story.relatedIds.every((id) => storyIds.has(id)))) throw new Error('Missing related story');
+    const mediaIds = new Set();
+    data.media.forEach((item) => {
+      if (!item || !['photo', 'art', 'audio', 'video'].includes(item.type) || !hasText(item.id)
+        || storyIds.has(item.id) || mediaIds.has(item.id) || !hasText(item.title)
+        || !hasText(item.caption) || !hasText(item.alt) || !hasText(item.file)
+        || !/^assets\/[a-zA-Z0-9_./-]+$/.test(item.file) || item.file.includes('..')
+        || !Array.isArray(item.tags) || !item.tags.every((id) => tagIds.has(id))
+        || !isDate(item.addedDate) || (item.eventDate !== null && !isDate(item.eventDate))
+        || !item.translations?.en || !['title', 'caption', 'alt'].every((key) => hasText(item.translations.en[key]))) throw new Error('Invalid media');
+      mediaIds.add(item.id);
+    });
     return data;
   };
 
@@ -165,10 +176,11 @@
       if (!data) return;
       const tagNames = new Map(data.tags.map((tag) => [tag.id, tagLabel(tag)]));
       const query = search.value.trim().toLocaleLowerCase('zh-CN');
-      const stories = data.stories.filter((story) => {
+      const stories = [...data.stories.map((story) => ({ ...story, type: 'story' })), ...data.media].filter((story) => {
         if (activeTag !== 'all' && !story.tags.includes(activeTag)) return false;
         const english = story.translations.en;
-        const haystack = [story.title, story.excerpt, ...story.paragraphs, english.title, english.excerpt, ...english.paragraphs, ...data.tags.filter((tag) => story.tags.includes(tag.id)).flatMap((tag) => [tag.label, tag.labelEn])].join(' ').toLocaleLowerCase('zh-CN');
+        const haystack = [story.title, story.excerpt || story.caption, ...(story.paragraphs || []), english.title,
+          english.excerpt || english.caption, ...(english.paragraphs || []), ...data.tags.filter((tag) => story.tags.includes(tag.id)).flatMap((tag) => [tag.label, tag.labelEn])].join(' ').toLocaleLowerCase('zh-CN');
         return !query || haystack.includes(query);
       });
       stories.sort(order.value === 'time' ? chronological : (first, second) => second.addedDate.localeCompare(first.addedDate) || first.id.localeCompare(second.id));
@@ -181,17 +193,20 @@
         button.setAttribute('aria-pressed', String(button.dataset.tag === activeTag));
         button.textContent = button.dataset.tag === 'all' ? t('allTheme') : tagNames.get(button.dataset.tag);
       });
-      status.textContent = t(query || activeTag !== 'all' ? 'foundStories' : 'storyCount', { count: stories.length, noun: stories.length === 1 ? 'story' : 'stories' });
+      status.textContent = t(query || activeTag !== 'all' ? 'foundEntries' : 'entryCount', { count: stories.length, noun: stories.length === 1 ? 'item' : 'items' });
       const icons = ['music', 'flower', 'star', 'cloud', 'sun', 'heart'];
       stories.slice(0, limit).forEach((story, index) => {
         const text = localized(story);
         const card = make('article', 'story-card');
         const link = make('a');
-        link.href = storyHref(story.id);
+        link.href = story.type === 'story' ? storyHref(story.id)
+          : story.eventDate && story.eventDate >= data.calendar.start && story.eventDate <= data.calendar.end
+            ? `day.html?date=${story.eventDate}&lang=${i18n.lang}` : story.file;
         const top = make('div', 'story-card-topline');
-        top.append(make('span', '', 'A LITTLE STORY'), sticker(icons[index % icons.length]));
+        const kind = { story: 'dayStory', photo: 'dayPhoto', art: 'dayArt', audio: 'dayAudio', video: 'dayVideo' }[story.type];
+        top.append(make('span', '', t(kind)), sticker(icons[index % icons.length]));
         const title = make('h3', '', text.title);
-        const excerpt = make('p', 'story-card-excerpt', text.excerpt);
+        const excerpt = make('p', 'story-card-excerpt', text.excerpt || text.caption);
         const tags = make('div', 'story-card-tags');
         renderTags(tags, story.tags, tagNames);
         const bottom = make('div', 'story-card-bottom');
@@ -205,7 +220,7 @@
         grid.append(card);
       });
       if (!stories.length) {
-        if (data.stories.length) {
+        if (data.stories.length || data.media.length) {
           showMessage('searchEmptyTitle', 'searchEmptyText', 'showAll', () => {
             search.value = '';
             activeTag = 'all';
@@ -231,7 +246,7 @@
         if (activeTag !== 'all' && !data.tags.some((tag) => tag.id === activeTag)) activeTag = 'all';
         const themes = $('#story-themes');
         themes.replaceChildren();
-        [{ id: 'all', label: t('allTheme'), labelEn: t('allTheme') }, ...data.tags.filter((tag) => data.stories.some((story) => story.tags.includes(tag.id)))].forEach((tag) => {
+        [{ id: 'all', label: t('allTheme'), labelEn: t('allTheme') }, ...data.tags.filter((tag) => [...data.stories, ...data.media].some((story) => story.tags.includes(tag.id)))].forEach((tag) => {
           const button = make('button', 'theme-chip', tagLabel(tag));
           button.type = 'button';
           button.dataset.tag = tag.id;
@@ -308,6 +323,13 @@
           return;
         }
         const text = localized(story);
+        const originDay = new URLSearchParams(window.location.search).get('day');
+        const back = $('#story-back');
+        if (back && isDate(originDay) && originDay >= data.calendar.start && originDay <= data.calendar.end) {
+          back.href = `day.html?date=${originDay}&lang=${i18n.lang}&restore=1`;
+          back.dataset.i18n = 'backToDay';
+          back.textContent = t('backToDay');
+        }
         document.title = `${text.title} · I AM GEORGE`;
         $('meta[name="description"]').content = text.excerpt;
         $('#detail-title').textContent = text.title;
@@ -315,6 +337,10 @@
         renderTags($('#detail-tags'), story.tags, tagNames);
         $('#detail-event-date').replaceChildren();
         addEventDate($('#detail-event-date'), story);
+        const dayLink = $('#story-day-link');
+        const inCalendar = story.eventDate && story.eventDate >= data.calendar.start && story.eventDate <= data.calendar.end;
+        dayLink.hidden = !inCalendar;
+        if (inCalendar) dayLink.href = `day.html?date=${story.eventDate}&lang=${i18n.lang}`;
         $('#detail-paragraphs').replaceChildren(...text.paragraphs.map((paragraph) => make('p', '', paragraph)));
         $('#detail-source').textContent = text.sourceLabel;
         $('#detail-narrator').textContent = t('narratorMoment', { narrator: text.narrator });

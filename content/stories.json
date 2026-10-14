@@ -17,9 +17,15 @@
       "labelEn": "The stories behind names"
     }
   ],
+  "calendar": {
+    "start": "2019-10-31",
+    "end": "2025-11-23",
+    "days": []
+  },
   "stories": [
     {
       "id": "piano-car-nap",
+      "type": "story",
       "title": "爸爸，我刚眯了一会儿",
       "excerpt": "下午两点左右的钢琴课，车上睡着的洋芋，还有爸爸配合着聊别的小片段。",
       "paragraphs": [
@@ -57,6 +63,7 @@
     },
     {
       "id": "three-names",
+      "type": "story",
       "title": "洋芋的三个名字",
       "excerpt": "方智灏、洋芋和 George，这三个名字是怎么来的。",
       "paragraphs": [
@@ -91,5 +98,6 @@
         }
       }
     }
-  ]
+  ],
+  "media": []
 }

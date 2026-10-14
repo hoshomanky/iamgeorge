@@ -16,10 +16,14 @@
   <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="stories.css">
+  <link rel="stylesheet" href="days.css">
   <link rel="stylesheet" href="bilingual.css">
   <link rel="stylesheet" href="typography.css">
   <script src="i18n.js" defer></script>
   <script src="stories.js" defer></script>
+  <script src="day-content.js" defer></script>
+  <script src="days.js" defer></script>
+  <script src="point-wall.js" defer></script>
 </head>
 <body data-story-page="collection" data-i18n-title="collectionTitle">
   <!-- Google Tag Manager (noscript) -->
@@ -48,11 +52,21 @@
 
   <main id="main" class="wrap stories-main">
     <section class="book-intro" aria-labelledby="collection-title">
-      <div class="book-intro-copy"><a class="back-link" href="index.html" data-i18n="backWorld">← 回到洋芋的世界</a><p class="eyebrow">GEORGE'S STORIES</p><h1 id="collection-title" data-i18n-html="storybookTitle">小小故事册<span class="coral">。</span></h1><p data-i18n-html="storybookIntro">一句他说过的话，一件日常小事。<br>每次添一页，慢慢认识洋芋。</p></div>
+      <div class="book-intro-copy"><a class="back-link" href="index.html" data-i18n="backWorld">← 回到洋芋的世界</a><p class="eyebrow">GEORGE'S STORIES</p><h1 id="collection-title" data-i18n-html="storybookTitle">小小故事册<span class="coral">。</span></h1><p data-i18n-html="storybookIntro">每一天都有自己的位置。<br>故事也可以按主题慢慢翻。</p></div>
       <div class="book-cover" aria-hidden="true"><span class="paper-tape"></span><svg class="book-flower"><use href="assets/stickers.svg#flower"></use></svg><span class="book-cover-label">LITTLE STORIES</span><strong data-i18n-html="bookCover">一个片段，<br>也是一页。</strong><svg class="book-star"><use href="assets/stickers.svg#star"></use></svg><svg class="book-music"><use href="assets/stickers.svg#music"></use></svg><span class="book-cover-rule"></span></div>
     </section>
 
-    <section class="story-collection" aria-labelledby="collection-heading">
+    <div class="storybook-modes" role="tablist" aria-label="浏览故事册" data-i18n-aria-label="browseModes"><button id="day-mode" type="button" role="tab" aria-controls="day-browser" aria-selected="false" data-i18n="dayByDay">每一天</button><button id="theme-mode" type="button" role="tab" aria-controls="theme-browser" aria-selected="true" data-i18n="byThemeMode">按主题</button></div>
+    <section id="day-browser" class="day-browser" role="tabpanel" aria-labelledby="day-mode" hidden>
+      <div class="wall-heading"><div><p class="eyebrow">DAY BY DAY</p><h2 data-i18n="wallTitle">洋芋的每一天。</h2></div><span id="wall-total"></span></div>
+      <div class="wall-controls"><label for="wall-year" data-i18n="wallYear">找到某一年</label><select id="wall-year" disabled></select><label for="wall-date" data-i18n="wallDate">选一个日子</label><input id="wall-date" type="date" disabled></div>
+      <p class="wall-hint" data-i18n="wallHint">点选圆点，看看这一天。也可以直接选择日期。</p>
+      <div class="wall-layout"><div class="wall-paper"><div class="wall-canvas-stage"><canvas id="lifetime-wall" tabindex="0" role="img" aria-describedby="wall-keyboard-help"></canvas><div id="wall-tooltip" role="tooltip" hidden></div></div><p id="wall-keyboard-help" class="visually-hidden" data-i18n="wallKeyboard">用左右键选择前后一天，上下键选择相邻行，Enter 打开日期卡。</p><div class="wall-endpoints"><time id="wall-start"></time><time id="wall-end"></time></div><div class="wall-colors"><span><i class="empty" aria-hidden="true"></i><span data-i18n="wallEmpty">等待补充 · 灰色</span></span><span><i class="winter" aria-hidden="true"></i><span data-i18n="wallWinter">12–2 月 · 淡蓝</span></span><span><i class="spring" aria-hidden="true"></i><span data-i18n="wallSpring">3–5 月 · 嫩绿</span></span><span><i class="summer" aria-hidden="true"></i><span data-i18n="wallSummer">6–8 月 · 暖黄</span></span><span><i class="autumn" aria-hidden="true"></i><span data-i18n="wallAutumn">9–11 月 · 珊瑚</span></span></div><p class="wall-published-note" data-i18n="wallPublished">灰色日子等待补充，有公开内容的日子按四季着色</p><div class="wall-day-navigation"><button id="wall-previous" type="button" data-i18n="previousDay" disabled>← 前一天</button><span id="wall-selected" aria-live="polite"></span><button id="wall-next" type="button" data-i18n="nextDay" disabled>后一天 →</button></div></div>
+      <aside id="day-preview" class="day-preview" aria-labelledby="preview-date" hidden><button id="close-day-preview" class="preview-close" type="button" aria-label="收起日期卡" data-i18n-aria-label="closeDayPreview">×</button><p class="eyebrow" data-i18n="dayPreview">这一天</p><h3 id="preview-date"></h3><p id="preview-count" class="preview-count"></p><div id="preview-content"></div><div id="preview-neighbours" class="preview-neighbours"><button id="preview-previous" type="button" data-i18n="previousDay">← 前一天</button><button id="preview-next" type="button" data-i18n="nextDay">后一天 →</button></div><a id="open-day" class="button button-dark" href="#" data-i18n="openThisDay">打开这一天 →</a></aside></div>
+      <p id="day-browser-status" class="day-browser-status" role="status" aria-live="polite"></p>
+      <noscript><p class="no-script-note">请启用 JavaScript 浏览点墙。<br><span lang="en">Enable JavaScript to browse the daily dots.</span></p></noscript>
+    </section>
+    <section id="theme-browser" class="story-collection" role="tabpanel" aria-labelledby="theme-mode">
       <h2 id="collection-heading" class="visually-hidden" data-i18n="allStories">所有故事</h2>
       <div id="story-controls" class="story-controls" hidden>
         <div class="collection-tools">
