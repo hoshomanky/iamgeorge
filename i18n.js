@@ -34,6 +34,8 @@
     shareMemoryOpen: ['打开分享表单', 'Open the sharing form'],
     shareMemoryNotice: ['将在新页面打开飞书表单。提交的内容不会自动公开到网站。', 'The Feishu form will open in a new tab. Your submission will not be published automatically on this website.'],
     shareMemoryFooter: ['分享一段回忆', 'Share a memory'],
+    fullAvatarAlt: ['洋芋拿着红玫瑰、露齿笑着的卡通形象', 'A cartoon avatar of Yang Yu holding a red rose with a toothy smile'],
+    fullAvatarCaption: ['卡通形象 · 背景经 AI 处理', 'Cartoon avatar · background edited with AI'],
     dateUnknown: ['故事发生日期尚未注明', 'Story date not yet recorded'], itemDateUnknown: ['具体日期尚未注明', 'Exact date not yet recorded'], foundStories: ['找到 {count} 个小故事', '{count} little {noun} found'], storyCount: ['现在有 {count} 个小故事', '{count} little {noun} so far'], allTheme: ['全部故事', 'All stories'], searchEmptyTitle: ['还没找到这个小故事', 'We haven’t found that little story'], searchEmptyText: ['试试换个词，或者回到全部故事慢慢翻。', 'Try another word, or take your time browsing all the stories.'], showAll: ['看看全部故事', 'See all stories'], emptyBookTitle: ['故事册等着添上第一篇', 'A storybook waiting for its first page'], emptyBookText: ['等家人准备好了，就把一个小片段放在这里。', 'The family will add a little moment when they’re ready.'], unavailableBook: ['故事册暂时没有打开', 'The storybook couldn’t be opened'], unavailableTitle: ['这一页暂时没能打开', 'This page couldn’t be opened'], unavailableText: ['请检查网络后，再试着翻开一次。', 'Check your connection, then try opening it again.'], pickStoryTitle: ['先从故事册挑一页', 'Choose a page from the storybook'], pickStoryText: ['每一个小故事，都在故事册里。', 'You’ll find each little story in the storybook.'], missingStoryTitle: ['没有找到这一页', 'We couldn’t find this page'], missingStoryText: ['这个链接可能有误。可以回到故事册，看看已经添入的小故事。', 'This link may be incorrect. Go back to the storybook to see the stories already added.'], addedDate: ['{date}添入故事册', 'Added to the storybook on {date}'], previousStory: ['← 前一个小故事', '← Previous little story'], nextStory: ['下一个小故事 →', 'Next little story →'], copied: ['链接已复制，可以分享这一页。', 'Link copied. You can share this page.'], copyFailed: ['浏览器没有自动复制，请手动复制下面的链接。', 'The browser couldn’t copy the link. Please copy it below.'],
     stickerMove: ['挪动{name}贴纸 {number}', 'Move {name} sticker {number}'], stickerTap: ['轻点挪动{name}贴纸', 'Tap to move the {name} sticker'],
     flower: ['花朵', 'flower'], star: ['星星', 'star'], rainbow: ['彩虹', 'rainbow'], heart: ['爱心', 'heart'], sun: ['太阳', 'sun'], cloud: ['云朵', 'cloud'], pencil: ['铅笔', 'pencil'], music: ['音符', 'music note'], leaf: ['叶子', 'leaf'], checker: ['彩色方格', 'colorful checkerboard'], spiral: ['小旋涡', 'little spiral'], sparkle: ['闪光', 'sparkle']
@@ -54,7 +56,7 @@
     document.documentElement.lang = language === 'en' ? 'en' : 'zh-CN';
     document.querySelectorAll('[data-i18n]').forEach((element) => { element.textContent = t(element.dataset.i18n); });
     document.querySelectorAll('[data-i18n-html]').forEach((element) => { element.innerHTML = t(element.dataset.i18nHtml); });
-    ['aria-label', 'title', 'placeholder', 'content'].forEach((attribute) => {
+    ['aria-label', 'title', 'placeholder', 'content', 'alt'].forEach((attribute) => {
       document.querySelectorAll(`[data-i18n-${attribute}]`).forEach((element) => { element.setAttribute(attribute, t(element.getAttribute(`data-i18n-${attribute}`))); });
     });
     document.querySelectorAll('[data-set-lang]').forEach((button) => { button.setAttribute('aria-pressed', String(button.dataset.setLang === language)); });

@@ -14,6 +14,10 @@
 .about-name-paper > .paper-tape { background: #b6d2efaa; width: 86px; left: calc(50% - 43px); transform: rotate(-7deg); }
 .about-name-top { display: flex; justify-content: space-between; align-items: center; font-size: 8px; letter-spacing: 1.65px; color: #697561; }
 .about-name-top > svg { width: 39px; height: 39px; transform: rotate(-10deg); }
+.about-avatar { margin: 13px 0 0; text-align: center; }
+.about-avatar img { display: block; width: 168px; max-width: 100%; height: auto; margin: auto; }
+.about-avatar figcaption { color: var(--muted); font-size: 9px; line-height: 1.7; margin-top: 8px; }
+.about-avatar + .about-george { margin-top: 18px; }
 .about-george { font-family: var(--display); font-size: 29px; letter-spacing: -.8px; font-weight: 700; line-height: 1.25; margin-top: 25px; }
 .about-chinese-name { font-size: 19px; font-weight: 500; letter-spacing: 4px; margin-top: 13px; }
 .about-nickname { font-size: 10px; line-height: 1.9; color: #697561; margin-top: 13px; }
