@@ -28,6 +28,14 @@
         ]
       },
       {
+        "date": "2022-10-16",
+        "itemIds": [
+          "photo-2022-10-16-88d8ae0c",
+          "little-doctor-with-grandma-2022-10-16",
+          "photo-2022-10-16-025aa85f"
+        ]
+      },
+      {
         "date": "2025-10-13",
         "itemIds": [
           "photo-2025-10-13-collage",
@@ -209,6 +217,43 @@
           "eventDateLabel": "Tuesday, 14 October 2025 · 23rd day of the eighth month in the Chinese lunar calendar"
         }
       }
+    },
+    {
+      "id": "little-doctor-with-grandma-2022-10-16",
+      "type": "story",
+      "title": "奶奶身边的小医生",
+      "excerpt": "洋芋在户外玩，也和奶奶一起待在家里。那时候，他特别喜欢小医生玩具。",
+      "paragraphs": [
+        "2022年10月16日，星期日，农历九月廿一。",
+        "这一天的照片里，有洋芋在户外玩的样子，也有他和奶奶待在家里的片刻。树荫落在小路上，他穿着粉色上衣，站在路中间。",
+        "那时候，洋芋特别喜欢一套小医生玩具。玩具箱里有医生服、听诊器等小玩具，他很喜欢扮医生。",
+        "在家里的照片中，他把白色的医生服穿在粉色上衣外面，坐在奶奶身旁。奶奶正剥着核桃，桌上摆着罐子和一碗核桃壳。他朝着镜头笑，抬起一只手，比了个V。"
+      ],
+      "tags": [
+        "daily-life"
+      ],
+      "eventDate": "2022-10-16",
+      "eventDateLabel": "2022年10月16日，星期日，农历九月廿一",
+      "addedDate": "2026-10-15",
+      "sourceLabel": "根据爸爸的讲述与照片整理",
+      "narrator": "爸爸",
+      "featured": false,
+      "relatedIds": [],
+      "translations": {
+        "en": {
+          "title": "A Little Doctor Beside Grandma",
+          "excerpt": "Yang Yu played outside and spent time at home with Grandma. At the time, he especially loved his toy doctor’s kit.",
+          "paragraphs": [
+            "Sunday, 16 October 2022 · 21st day of the ninth month in the Chinese lunar calendar.",
+            "The photos from that day show Yang Yu playing outside and spending time at home with Grandma. In one, he is standing in the middle of a path in a pink top, with shadows from the trees falling across the ground.",
+            "At the time, Yang Yu especially loved his toy doctor's kit. It came in a case with a doctor's coat, a stethoscope and other small toys. He loved playing doctor.",
+            "In the photo at home, he is sitting beside Grandma, wearing the white doctor's coat over his pink top. Grandma is shelling walnuts, with jars and a bowl of walnut shells on the table. He smiles at the camera and raises one hand in a V sign."
+          ],
+          "sourceLabel": "Edited from Dad’s account and photographs",
+          "narrator": "Dad",
+          "eventDateLabel": "Sunday, 16 October 2022 · 21st day of the ninth month in the Chinese lunar calendar"
+        }
+      }
     }
   ],
   "media": [
@@ -355,6 +400,56 @@
       },
       "width": 1254,
       "height": 1254
+    },
+    {
+      "id": "photo-2022-10-16-88d8ae0c",
+      "type": "photo",
+      "title": "树荫下的小路",
+      "caption": "2022年10月16日，星期日，农历九月廿一。洋芋穿着粉色上衣，站在树荫下的小路上。照片经AI隐私处理，远处路人已遮挡；局部路面纹理有AI调整。",
+      "alt": "洋芋穿着粉色上衣站在林荫小路上，远处路人已作隐私遮挡。",
+      "file": "assets/photos/2022-10-16-outdoor-privacy-v2.jpg",
+      "tags": [
+        "daily-life"
+      ],
+      "eventDate": "2022-10-16",
+      "addedDate": "2026-10-15",
+      "relatedIds": [
+        "little-doctor-with-grandma-2022-10-16"
+      ],
+      "translations": {
+        "en": {
+          "title": "A Path in the Shade",
+          "caption": "Sunday, 16 October 2022 · 21st day of the ninth month in the Chinese lunar calendar. Yang Yu stands on a tree-shaded path in a pink top. The photo has been edited with AI for privacy, with distant passers-by obscured. Some road textures have also been altered by AI.",
+          "alt": "Yang Yu in a pink top on a tree-lined path, with distant passers-by obscured for privacy."
+        }
+      },
+      "width": 1448,
+      "height": 1086
+    },
+    {
+      "id": "photo-2022-10-16-025aa85f",
+      "type": "photo",
+      "title": "奶奶身边的小医生",
+      "caption": "2022年10月16日，星期日，农历九月廿一。洋芋穿着玩具医生服，坐在剥核桃的奶奶身旁，朝镜头比V手势。照片经AI基础修片与隐私处理，奶奶面部已作马赛克遮挡。",
+      "alt": "洋芋穿着白色玩具医生服朝镜头比V手势，奶奶在一旁剥核桃，面部已打马赛克。",
+      "file": "assets/photos/2022-10-16-grandma-little-doctor-retouch-v2-1.jpg",
+      "tags": [
+        "daily-life"
+      ],
+      "eventDate": "2022-10-16",
+      "addedDate": "2026-10-15",
+      "relatedIds": [
+        "little-doctor-with-grandma-2022-10-16"
+      ],
+      "translations": {
+        "en": {
+          "title": "A Little Doctor Beside Grandma",
+          "caption": "Sunday, 16 October 2022 · 21st day of the ninth month in the Chinese lunar calendar. Wearing his play doctor's coat, Yang Yu makes a V sign towards the camera while sitting beside Grandma, who is shelling walnuts. The photo has been retouched and edited with AI for privacy. Grandma's face is pixelated.",
+          "alt": "Yang Yu in a white play doctor's coat making a V sign towards the camera, beside Grandma shelling walnuts with her face pixelated."
+        }
+      },
+      "width": 1536,
+      "height": 1024
     }
   ],
   "memories": {

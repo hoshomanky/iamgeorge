@@ -1,6 +1,6 @@
 (() => {
   'use strict';
-  const published = {"stories":["piano-car-nap","three-names","kindergarten-helper-2025-10-13","mum-phone-in-lift-2025-10-14"],"days":["2021-10-16","2025-10-13","2025-10-14","2025-10-15","2025-10-16"]};
+  const published = {"stories":["piano-car-nap","three-names","kindergarten-helper-2025-10-13","mum-phone-in-lift-2025-10-14","little-doctor-with-grandma-2022-10-16"],"days":["2021-10-16","2022-10-16","2025-10-13","2025-10-14","2025-10-15","2025-10-16"]};
   const stories = new Set(published.stories);
   const days = new Set(published.days);
   const bases = new Set(['index', 'about', 'stories', 'story', 'day', 'memories']);
