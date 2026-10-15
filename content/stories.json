@@ -138,7 +138,8 @@
       "title": "当小标兵的这一天",
       "excerpt": "白天，洋芋在幼儿园当小标兵。晚上，他坐在椅子上读书，笑得很开心。",
       "paragraphs": [
-        "2025年10月13日，洋芋在幼儿园当小标兵。",
+        "2025年10月13日，星期一，农历八月廿二。",
+        "这一天，洋芋在幼儿园当小标兵。",
         "幼儿园每天会有两位小朋友值日，负责给入园的小朋友测量体温，帮大家洗手、消毒。",
         "照片里，洋芋穿着红色的衣服，戴着蓝色绶带，拿着体温计给一位小朋友测体温。",
         "洋芋从小班入园，如今已经读到大班，快要毕业了。看着他当小标兵的这些照片，我觉得他很自信。",
@@ -148,7 +149,7 @@
         "daily-life"
       ],
       "eventDate": "2025-10-13",
-      "eventDateLabel": "2025年10月13日",
+      "eventDateLabel": "2025年10月13日，星期一，农历八月廿二",
       "addedDate": "2026-10-14",
       "sourceLabel": "根据爸爸的讲述整理",
       "narrator": "爸爸",
@@ -159,7 +160,8 @@
           "title": "A day as a kindergarten helper",
           "excerpt": "Yang Yu was on duty as a kindergarten helper that day. That evening, he sat in a chair with a book, smiling happily.",
           "paragraphs": [
-            "On 13 October 2025, Yang Yu was on duty as a helper at kindergarten.",
+            "Monday, 13 October 2025 · 22nd day of the eighth month in the Chinese lunar calendar.",
+            "That day, Yang Yu was on duty as a helper at kindergarten.",
             "Two children take on this role each day. They check the temperatures of children arriving at kindergarten and help them wash and sanitise their hands.",
             "In the photos, Yang Yu is wearing red clothes and a blue sash, holding a thermometer to check another child’s temperature.",
             "Yang Yu started in the youngest class. Now he is in the oldest class and will soon be finishing kindergarten. Looking at these photos of him on duty, I think he looks very confident.",
@@ -167,7 +169,7 @@
           ],
           "sourceLabel": "Edited from Dad’s account",
           "narrator": "Dad",
-          "eventDateLabel": "13 October 2025"
+          "eventDateLabel": "Monday, 13 October 2025 · 22nd day of the eighth month in the Chinese lunar calendar"
         }
       }
     },
@@ -177,7 +179,8 @@
       "title": "仰头看看妈妈的手机",
       "excerpt": "上学前的电梯里，洋芋背着书包，仰起头去看妈妈的手机。",
       "paragraphs": [
-        "2025年10月14日早上，妈妈送洋芋去上学，在电梯里拍下了这段小视频。",
+        "2025年10月14日，星期二，农历八月廿三。",
+        "这天早上，妈妈送洋芋去上学，在电梯里拍下了这段小视频。",
         "洋芋穿着红色外套，背着书包，站在妈妈身旁。妈妈举着手机对着镜子拍，他往妈妈身边凑了凑，探过身子，仰起头去看手机。",
         "看他伸长脖子的样子，真可爱。"
       ],
@@ -185,7 +188,7 @@
         "daily-life"
       ],
       "eventDate": "2025-10-14",
-      "eventDateLabel": "2025年10月14日",
+      "eventDateLabel": "2025年10月14日，星期二，农历八月廿三",
       "addedDate": "2026-10-15",
       "sourceLabel": "根据爸爸的讲述与提供的视频画面整理",
       "narrator": "爸爸",
@@ -196,13 +199,14 @@
           "title": "Looking up at Mum’s phone",
           "excerpt": "In the lift on the way to school, Yang Yu had his schoolbag on his back and tilted his head up to look at Mum’s phone.",
           "paragraphs": [
-            "On the morning of 14 October 2025, Mum was taking Yang Yu to school and filmed this short clip in the lift.",
+            "Tuesday, 14 October 2025 · 23rd day of the eighth month in the Chinese lunar calendar.",
+            "That morning, Mum was taking Yang Yu to school and filmed this short clip in the lift.",
             "Yang Yu was wearing a red jacket and had his schoolbag on his back, standing beside Mum. As Mum held up her phone to film them in the mirror, he moved a little closer, leaned over and tilted his head up to look at the phone.",
             "He looks so sweet with his neck stretched up like that."
           ],
           "sourceLabel": "Edited from Dad’s account and the supplied video images",
           "narrator": "Dad",
-          "eventDateLabel": "14 October 2025"
+          "eventDateLabel": "Tuesday, 14 October 2025 · 23rd day of the eighth month in the Chinese lunar calendar"
         }
       }
     }
@@ -212,7 +216,7 @@
       "id": "photo-2025-10-13-collage",
       "type": "photo",
       "title": "白天的小标兵",
-      "caption": "洋芋在幼儿园当小标兵。",
+      "caption": "原片拍摄于2025年10月13日，星期一，农历八月廿二。 洋芋在幼儿园当小标兵。",
       "alt": "三张照片组成的拼图，洋芋穿红衣、戴蓝绶带，在消毒装置旁伸出手、靠着柱子站立，并为一位小朋友测量体温。",
       "file": "assets/photos/2025-10-13-kindergarten-helper.jpg",
       "tags": [
@@ -226,7 +230,7 @@
       "translations": {
         "en": {
           "title": "On duty at kindergarten",
-          "caption": "Yang Yu on duty as a kindergarten helper.",
+          "caption": "Original photos taken on Monday, 13 October 2025 · 22nd day of the eighth month in the Chinese lunar calendar. Yang Yu on duty as a kindergarten helper.",
           "alt": "A collage of three photos showing Yang Yu in red clothes and a blue sash, holding out his hand beside a sanitiser dispenser, standing against a pillar, and checking another child’s temperature."
         }
       },
@@ -237,7 +241,7 @@
       "id": "photo-undated-reading-heic",
       "type": "photo",
       "title": "晚上的读书时光",
-      "caption": "到了晚上，洋芋坐在椅子上，手里摊着书，笑得很开心。",
+      "caption": "拍摄于2025年10月13日，星期一，农历八月廿二。 到了晚上，洋芋坐在椅子上，手里摊着书，笑得很开心。",
       "alt": "洋芋坐在书架前的椅子上，手里摊着一本书，脸上带着笑容。",
       "file": "assets/photos/2025-10-13-evening-reading.jpg",
       "tags": [
@@ -251,7 +255,7 @@
       "translations": {
         "en": {
           "title": "Reading that evening",
-          "caption": "That evening, Yang Yu sat in a chair with a book open in his hands, smiling happily.",
+          "caption": "Photographed on Monday, 13 October 2025 · 22nd day of the eighth month in the Chinese lunar calendar. That evening, Yang Yu sat in a chair with a book open in his hands, smiling happily.",
           "alt": "Yang Yu sitting in a chair in front of bookshelves, holding an open book and smiling."
         }
       },
@@ -262,7 +266,7 @@
       "id": "photo-2025-10-14-lift-02",
       "type": "photo",
       "title": "仰头看妈妈的手机",
-      "caption": "洋芋探过身子，仰起头。照片经 AI 去除电梯门缝并调色。",
+      "caption": "原视频拍摄于2025年10月14日，星期二，农历八月廿三。 洋芋探过身子，仰起头。照片经 AI 去除电梯门缝并调色。",
       "alt": "洋芋穿着红色外套、背着书包，伸长脖子向上看。",
       "file": "assets/photos/2025-10-14-looking-up-at-mums-phone-web-c265ee87.jpg",
       "tags": [
@@ -276,7 +280,7 @@
       "translations": {
         "en": {
           "title": "Looking up at Mum’s phone",
-          "caption": "Yang Yu leans over and tilts his head up. The photo has been edited with AI to remove the lift-door seam and adjust its colours.",
+          "caption": "Original video filmed on Tuesday, 14 October 2025 · 23rd day of the eighth month in the Chinese lunar calendar. Yang Yu leans over and tilts his head up. The photo has been edited with AI to remove the lift-door seam and adjust its colours.",
           "alt": "Yang Yu, wearing a red jacket and a schoolbag, cranes his neck to look up."
         }
       },
@@ -287,7 +291,7 @@
       "id": "photo-2025-10-15-meal-1373",
       "type": "photo",
       "title": "他的专用碗",
-      "caption": "这应该是洋芋在家里吃晚餐时拍的。面前的碗是他专用的，身上穿着幼儿园的白色 Polo 衫校服。",
+      "caption": "拍摄于2025年10月15日，星期三，农历八月廿四。 这应该是洋芋在家里吃晚餐时拍的。面前的碗是他专用的，身上穿着幼儿园的白色 Polo 衫校服。",
       "alt": "洋芋穿着白色 Polo 衫坐在餐桌前，手里拿着勺子，面前放着饭碗。",
       "file": "assets/photos/2025-10-15-own-bowl-v1.jpg",
       "tags": [
@@ -299,7 +303,7 @@
       "translations": {
         "en": {
           "title": "His own bowl",
-          "caption": "This was probably taken while Yang Yu was having dinner at home. The bowl in front of him was his own, and he was wearing the white polo shirt that was part of his kindergarten uniform.",
+          "caption": "Photographed on Wednesday, 15 October 2025 · 24th day of the eighth month in the Chinese lunar calendar. This was probably taken while Yang Yu was having dinner at home. The bowl in front of him was his own, and he was wearing the white polo shirt that was part of his kindergarten uniform.",
           "alt": "Yang Yu sitting at the table in a white polo shirt, holding a spoon, with a bowl in front of him."
         }
       },
@@ -310,7 +314,7 @@
       "id": "photo-2025-10-16-kindergarten-reading",
       "type": "photo",
       "title": "窗边一起看书",
-      "caption": "幼儿园里，洋芋和小朋友坐在窗边，一起看一本绘本。老师留下了这一幕。照片经 AI 裁剪及隐私处理，其他小朋友已作遮挡。",
+      "caption": "拍摄于2025年10月16日，星期四，农历八月廿五。 幼儿园里，洋芋和小朋友坐在窗边，一起看一本绘本。老师留下了这一幕。照片经 AI 裁剪及隐私处理，其他小朋友已作遮挡。",
       "alt": "洋芋穿着深蓝色恐龙图案上衣，坐在幼儿园窗边看绘本，旁边的小朋友已作隐私遮挡。",
       "file": "assets/photos/2025-10-16-kindergarten-reading-privacy-v1.jpg",
       "tags": [
@@ -322,7 +326,7 @@
       "translations": {
         "en": {
           "title": "Reading together by the window",
-          "caption": "At kindergarten, Yang Yu sat by the window with other children, looking at a picture book together. A teacher captured this moment. The image has been cropped and edited with AI to protect privacy. The other children have been obscured.",
+          "caption": "Photographed on Thursday, 16 October 2025 · 25th day of the eighth month in the Chinese lunar calendar. At kindergarten, Yang Yu sat by the window with other children, looking at a picture book together. A teacher captured this moment. The image has been cropped and edited with AI to protect privacy. The other children have been obscured.",
           "alt": "Yang Yu, wearing a dark blue top with a dinosaur pattern, looking at a picture book by a kindergarten window. The other children have been obscured for privacy."
         }
       },
@@ -333,7 +337,7 @@
       "id": "photo-2021-10-16-brothers-scrapes",
       "type": "photo",
       "title": "兄弟俩都挂了彩",
-      "caption": "我记得，哥哥和洋芋是在同一天挂彩的。 那天晚上回家，看见哥哥伤在鼻梁上，洋芋伤在眉边，就给兄弟俩拍了这张照片。 照片经 AI 隐私处理，哥哥的面部及背景人物已作遮挡，鼻梁伤处保留。",
+      "caption": "拍摄于2021年10月16日，星期六，农历九月十一。 我记得，哥哥和洋芋是在同一天挂彩的。 那天晚上回家，看见哥哥伤在鼻梁上，洋芋伤在眉边，就给兄弟俩拍了这张照片。 照片经 AI 隐私处理，哥哥的面部及背景人物已作遮挡，鼻梁伤处保留。",
       "alt": "洋芋和哥哥同框，洋芋眉边与哥哥鼻梁上可见伤痕，哥哥其余面部已作马赛克处理。",
       "file": "assets/photos/2021-10-16-brothers-privacy-v1.jpg",
       "tags": [
@@ -345,7 +349,7 @@
       "translations": {
         "en": {
           "title": "The boys both had scrapes",
-          "caption": "As I remember it, Yang Yu and his older brother both got hurt on the same day. When I came home that evening, I saw a scrape on his brother’s nose bridge and one by Yang Yu’s eyebrow, and took this photo of the two of them. The image has been edited with AI for privacy. His brother’s face and the person in the background have been obscured, while the scrape on his brother’s nose bridge remains visible.",
+          "caption": "Photographed on Saturday, 16 October 2021 · 11th day of the ninth month in the Chinese lunar calendar. As I remember it, Yang Yu and his older brother both got hurt on the same day. When I came home that evening, I saw a scrape on his brother’s nose bridge and one by Yang Yu’s eyebrow, and took this photo of the two of them. The image has been edited with AI for privacy. His brother’s face and the person in the background have been obscured, while the scrape on his brother’s nose bridge remains visible.",
           "alt": "Yang Yu and his older brother together, with scrapes visible by Yang Yu’s eyebrow and on his brother’s nose bridge. The rest of his brother’s face is pixelated."
         }
       },
