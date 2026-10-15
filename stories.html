@@ -19,6 +19,7 @@
   <link rel="stylesheet" href="styles.css?v=static-content-1">
   <link rel="stylesheet" href="stories.css">
 <link rel="stylesheet" href="days.css">
+<link rel="stylesheet" href="memories.css">
   <link rel="stylesheet" href="bilingual.css">
   <link rel="stylesheet" href="typography.css">
   <script src="site-routes.js" defer></script>
@@ -35,7 +36,7 @@
       <span><strong>I AM GEORGE<span class="brand-dot">.</span></strong><small data-i18n="brandSubtitle">洋芋的小小世界</small></span>
     </a>
     <nav data-i18n-aria-label="mainNav" aria-label="主要导航">
-      <a href="/stories" aria-current="page">小小故事册</a><a href="/#creations" data-i18n="navCreations">小小画廊</a><a href="/#memories" data-i18n="navMemories">留住的时光</a><a href="/#letters" data-i18n="navLetters">写给洋芋</a>
+      <a href="/stories" aria-current="page">小小故事册</a><a href="/#creations" data-i18n="navCreations">小小画廊</a><a href="/memories" data-i18n="navMemories">留住的时光</a><a href="/#letters" data-i18n="navLetters">写给洋芋</a>
     </nav>
     <div class="header-tools"><div class="language-switch" role="group" data-i18n-aria-label="languageGroup" aria-label="阅读语言"><a data-set-lang="zh" lang="zh-CN" href="/stories" aria-current="true">中文</a><a data-set-lang="en" lang="en" href="/stories.en">EN</a></div><div class="paper-control">
       <button id="paper-toggle" class="paper-toggle" aria-expanded="false" aria-controls="paper-palette" data-i18n-title="paperChangeTitle" title="换一种纸色">
@@ -60,6 +61,7 @@
       <div class="book-cover" aria-hidden="true"><span class="paper-tape"></span><svg class="book-flower"><use href="assets/stickers.svg#flower"></use></svg><span class="book-cover-label">LITTLE STORIES</span><strong data-i18n-html="bookCover">一个片段，<br>也是一页。</strong><svg class="book-star"><use href="assets/stickers.svg#star"></use></svg><svg class="book-music"><use href="assets/stickers.svg#music"></use></svg><span class="book-cover-rule"></span></div>
     </section>
 
+    <p class="storybook-photo-link"><a href="/memories" data-i18n="storyMemoriesLink">想先看看照片？翻开留住的时光 →</a></p>
     <div class="storybook-modes" role="tablist" aria-label="浏览故事册" data-i18n-aria-label="browseModes"><button id="day-mode" type="button" role="tab" aria-controls="day-browser" aria-selected="false" data-i18n="dayByDay">每一天</button><button id="theme-mode" type="button" role="tab" aria-controls="theme-browser" aria-selected="true" data-i18n="byThemeMode">按主题</button></div>
     <section id="day-browser" class="day-browser" role="tabpanel" aria-labelledby="day-mode" hidden>
       <div class="wall-heading"><div><p class="eyebrow">DAY BY DAY</p><h2 data-i18n="wallTitle">洋芋的每一天。</h2></div><span id="wall-total"></span></div>

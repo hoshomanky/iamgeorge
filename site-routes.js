@@ -3,7 +3,7 @@
   const published = {"stories":["piano-car-nap","three-names","kindergarten-helper-2025-10-13","mum-phone-in-lift-2025-10-14"],"days":["2025-10-13","2025-10-14"]};
   const stories = new Set(published.stories);
   const days = new Set(published.days);
-  const bases = new Set(['index', 'about', 'stories', 'story', 'day']);
+  const bases = new Set(['index', 'about', 'stories', 'story', 'day', 'memories']);
   const file = (kind, lang, id) => {
     const name = `${kind}${id ? `-${id}` : ''}${lang === 'en' ? '.en' : ''}`;
     return name === 'index' ? '/' : `/${name}`;

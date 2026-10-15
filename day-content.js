@@ -118,6 +118,13 @@
     viewer.querySelector('[data-photo-next]').textContent = `${t('nextPhoto')} →`;
     viewer.querySelector('[data-photo-original]').textContent = t('originalPhoto');
     viewer.querySelector('[data-photo-error]').textContent = t('photoUnavailable');
+    const context = viewer.querySelector('[data-photo-context]');
+    context.replaceChildren();
+    for (const entry of item.contextLinks || []) {
+      if (typeof entry.label !== 'string' || !/^\/(?:day|story)-[a-z0-9.-]+$/.test(entry.href)) continue;
+      const link = make('a', '', entry.label); link.href = entry.href; context.append(link);
+    }
+    context.hidden = !context.childElementCount;
   };
   const openGallery = (items, index, opener) => {
     galleryItems = items;
@@ -136,7 +143,8 @@
       const position = make('span'); position.dataset.photoPosition = ''; position.setAttribute('aria-live', 'polite');
       const next = make('button'); next.type = 'button'; next.dataset.photoNext = '';
       const original = make('a', 'photo-viewer-original'); original.dataset.photoOriginal = ''; original.target = '_blank'; original.rel = 'noopener';
-      nav.append(previous, position, next); viewer.append(close, title, figure, error, nav, original); document.body.append(viewer);
+      const context = make('div', 'photo-viewer-context'); context.dataset.photoContext = ''; context.hidden = true;
+      nav.append(previous, position, next); viewer.append(close, title, figure, error, context, nav, original); document.body.append(viewer);
       close.addEventListener('click', () => viewer.close());
       previous.addEventListener('click', () => { galleryIndex--; renderViewer(); });
       next.addEventListener('click', () => { galleryIndex++; renderViewer(); });
