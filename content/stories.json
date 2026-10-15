@@ -22,6 +22,12 @@
     "end": "2025-11-23",
     "days": [
       {
+        "date": "2021-10-16",
+        "itemIds": [
+          "photo-2021-10-16-brothers-scrapes"
+        ]
+      },
+      {
         "date": "2025-10-13",
         "itemIds": [
           "photo-2025-10-13-collage",
@@ -322,6 +328,29 @@
       },
       "width": 1086,
       "height": 1448
+    },
+    {
+      "id": "photo-2021-10-16-brothers-scrapes",
+      "type": "photo",
+      "title": "兄弟俩都挂了彩",
+      "caption": "我记得，哥哥和洋芋是在同一天挂彩的。 那天晚上回家，看见哥哥伤在鼻梁上，洋芋伤在眉边，就给兄弟俩拍了这张照片。 照片经 AI 隐私处理，哥哥的面部及背景人物已作遮挡，鼻梁伤处保留。",
+      "alt": "洋芋和哥哥同框，洋芋眉边与哥哥鼻梁上可见伤痕，哥哥其余面部已作马赛克处理。",
+      "file": "assets/photos/2021-10-16-brothers-privacy-v1.jpg",
+      "tags": [
+        "daily-life"
+      ],
+      "eventDate": "2021-10-16",
+      "addedDate": "2026-10-15",
+      "relatedIds": [],
+      "translations": {
+        "en": {
+          "title": "The boys both had scrapes",
+          "caption": "As I remember it, Yang Yu and his older brother both got hurt on the same day. When I came home that evening, I saw a scrape on his brother’s nose bridge and one by Yang Yu’s eyebrow, and took this photo of the two of them. The image has been edited with AI for privacy. His brother’s face and the person in the background have been obscured, while the scrape on his brother’s nose bridge remains visible.",
+          "alt": "Yang Yu and his older brother together, with scrapes visible by Yang Yu’s eyebrow and on his brother’s nose bridge. The rest of his brother’s face is pixelated."
+        }
+      },
+      "width": 1254,
+      "height": 1254
     }
   ],
   "memories": {
