@@ -37,6 +37,12 @@
         ]
       },
       {
+        "date": "2025-10-15",
+        "itemIds": [
+          "photo-2025-10-15-meal-1373"
+        ]
+      },
+      {
         "date": "2025-10-16",
         "itemIds": [
           "photo-2025-10-16-kindergarten-reading"
@@ -270,6 +276,29 @@
       },
       "width": 1086,
       "height": 1448
+    },
+    {
+      "id": "photo-2025-10-15-meal-1373",
+      "type": "photo",
+      "title": "他的专用碗",
+      "caption": "这应该是洋芋在家里吃晚餐时拍的。面前的碗是他专用的，身上穿着幼儿园的白色 Polo 衫校服。",
+      "alt": "洋芋穿着白色 Polo 衫坐在餐桌前，手里拿着勺子，面前放着饭碗。",
+      "file": "assets/photos/2025-10-15-own-bowl-v1.jpg",
+      "tags": [
+        "daily-life"
+      ],
+      "eventDate": "2025-10-15",
+      "addedDate": "2026-10-15",
+      "relatedIds": [],
+      "translations": {
+        "en": {
+          "title": "His own bowl",
+          "caption": "This was probably taken while Yang Yu was having dinner at home. The bowl in front of him was his own, and he was wearing the white polo shirt that was part of his kindergarten uniform.",
+          "alt": "Yang Yu sitting at the table in a white polo shirt, holding a spoon, with a bowl in front of him."
+        }
+      },
+      "width": 1200,
+      "height": 1600
     },
     {
       "id": "photo-2025-10-16-kindergarten-reading",
