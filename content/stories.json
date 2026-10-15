@@ -35,6 +35,12 @@
           "photo-2025-10-14-lift-02",
           "mum-phone-in-lift-2025-10-14"
         ]
+      },
+      {
+        "date": "2025-10-16",
+        "itemIds": [
+          "photo-2025-10-16-kindergarten-reading"
+        ]
       }
     ]
   },
@@ -260,6 +266,29 @@
           "title": "Looking up at Mum’s phone",
           "caption": "Yang Yu leans over and tilts his head up. The photo has been edited with AI to remove the lift-door seam and adjust its colours.",
           "alt": "Yang Yu, wearing a red jacket and a schoolbag, cranes his neck to look up."
+        }
+      },
+      "width": 1086,
+      "height": 1448
+    },
+    {
+      "id": "photo-2025-10-16-kindergarten-reading",
+      "type": "photo",
+      "title": "窗边一起看书",
+      "caption": "幼儿园里，洋芋和小朋友坐在窗边，一起看一本绘本。老师留下了这一幕。照片经 AI 裁剪及隐私处理，其他小朋友已作遮挡。",
+      "alt": "洋芋穿着深蓝色恐龙图案上衣，坐在幼儿园窗边看绘本，旁边的小朋友已作隐私遮挡。",
+      "file": "assets/photos/2025-10-16-kindergarten-reading-privacy-v1.jpg",
+      "tags": [
+        "daily-life"
+      ],
+      "eventDate": "2025-10-16",
+      "addedDate": "2026-10-15",
+      "relatedIds": [],
+      "translations": {
+        "en": {
+          "title": "Reading together by the window",
+          "caption": "At kindergarten, Yang Yu sat by the window with other children, looking at a picture book together. A teacher captured this moment. The image has been cropped and edited with AI to protect privacy. The other children have been obscured.",
+          "alt": "Yang Yu, wearing a dark blue top with a dinosaur pattern, looking at a picture book by a kindergarten window. The other children have been obscured for privacy."
         }
       },
       "width": 1086,
